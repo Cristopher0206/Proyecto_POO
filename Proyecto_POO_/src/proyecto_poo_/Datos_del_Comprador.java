@@ -16,10 +16,13 @@ public class Datos_del_Comprador extends javax.swing.JFrame {
     /**
      * Creates new form Datos_del_Comprador
      */
+    ArrayList<Videojuego> listaJuegos = new ArrayList<>();
+
     public Datos_del_Comprador() {
         initComponents();
     }
     Factura factura = new Factura();
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -85,6 +88,12 @@ public class Datos_del_Comprador extends javax.swing.JFrame {
         lblNumeral.setText("######");
 
         lblTexto1.setText("DATOS (LLENAR)");
+
+        txtApellido.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtApellidoKeyPressed(evt);
+            }
+        });
 
         cmbDia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27. 28. 29", "30", "31" }));
         cmbDia.addActionListener(new java.awt.event.ActionListener() {
@@ -167,9 +176,7 @@ public class Datos_del_Comprador extends javax.swing.JFrame {
                         .addComponent(btnGuardar)
                         .addGap(50, 50, 50)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(84, 84, 84)
                         .addComponent(jLabel2)))
@@ -246,25 +253,563 @@ public class Datos_del_Comprador extends javax.swing.JFrame {
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
         // TODO add your handling code here:
         String dia;
-        String mes; 
+        String mes;
         String año;
         String tipoConsola;
         String complemento;
-        ArrayList <String> consolas = new ArrayList();
-        
+        ArrayList<String> consolas = new ArrayList();
+
         factura.setNumCedula(txtCédula.getText());
         factura.setNombre(txtNombre.getText());
         factura.setApellido(txtApellido.getText());
         dia = (String) cmbDia.getSelectedItem();
         mes = (String) cmbDia.getSelectedItem();
         año = (String) cmbAño.getSelectedItem();
-        factura.setFecha(dia +"/"+ mes + "/"+año);
+        factura.setFecha(dia + "/" + mes + "/" + año);
         //tipoConsola = (String) cmbTipoConsola.getSelectedItem();
         complemento = (String) cbmTipoComplemento.getSelectedItem();
+        factura.setComplemento(complemento);
+        factura.setListaJuegos(listaJuegos);
         factura.setValorAPagar(Double.parseDouble(txtValorAPagar.getText()));
-        
         txaResultados.append(factura.toString());
     }//GEN-LAST:event_btnGuardarActionPerformed
+
+    private void txtApellidoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtApellidoKeyPressed
+
+        // TODO add your handling code here:
+        String nombre = "";
+        double precio = 0;
+        String exclusividad = "";
+        if (Datos_juegos.cbxAnimalCrossing.isSelected()) {
+            nombre = "Animal Crossing: New Horizons";
+            precio = 55;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoNintendoSwitch(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxAssassinsCreedOdyssey.isSelected()) {
+            nombre = "Assassins Creed Odyssey";
+            precio = 24;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxAssassinsCreedOrigins.isSelected()) {
+            nombre = "Assassins Creed Origins";
+            precio = 35;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxAssassinsCreedOdyssey.isSelected()) {
+            nombre = "Assassins Creed Unity";
+            precio = 20;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxBattlefield5.isSelected()) {
+            nombre = "Battlefield V";
+            precio = 27;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxBioshockInfinite.isSelected()) {
+            nombre = "Bioshock Infinite";
+            precio = 10;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxCodMW.isSelected()) {
+            nombre = "Call of Duty: Modern Warfare";
+            precio = 39;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxDaysGone.isSelected()) {
+            nombre = "Days Gone";
+            precio = 33;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoPS4(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxDeadByDaylight.isSelected()) {
+            nombre = "Dead by Daylight";
+            precio = 20;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxDragonBallFZ.isSelected()) {
+            nombre = "Dragon Ball FighterZ";
+            precio = 35;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxDragonBallX2.isSelected()) {
+            nombre = "Dragon Ball Xenoverse 2";
+            precio = 25;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxFallGuys.isSelected()) {
+            nombre = "Fall Guys Ultimate Knockout";
+            precio = 10;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxFIFA20.isSelected()) {
+            nombre = "FIFA 20";
+            precio = 35;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxForzaHorizon.isSelected()) {
+            nombre = "Forza Horizon 4";
+            precio = 75;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoXboxOne(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxForzaMotorsport.isSelected()) {
+            nombre = "Forza Motorsport 7";
+            precio = 25;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoXboxOne(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxFriday13.isSelected()) {
+            nombre = "Friday the 13th: The Game";
+            precio = 15;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxGears5.isSelected()) {
+            nombre = "Gears 5";
+            precio = 28;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoXboxOne(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxGearsOfWar4.isSelected()) {
+            nombre = "Gears of War 4";
+            precio = 15;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoXboxOne(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxGodOfWar.isSelected()) {
+            nombre = "God of War";
+            precio = 20;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoPS4(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxGranTurismo.isSelected()) {
+            nombre = "Gran Turismo Sport";
+            precio = 15;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoPS4(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxHalo5.isSelected()) {
+            nombre = "HALO 5: Guardians";
+            precio = 20;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoXboxOne(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxHorizonZeroDawn.isSelected()) {
+            nombre = "Horizon Zero Dawn";
+            precio = 20;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoPS4(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxInfamousSS.isSelected()) {
+            nombre = "Infamous Second Son";
+            precio = 15;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoPS4(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxMarioKart8.isSelected()) {
+            nombre = "Mario Kart 8 Deluxe";
+            precio = 45;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoNintendoSwitch(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxMarvelAvengers.isSelected()) {
+            nombre = "Marvel's Avengers";
+            precio = 47;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxMUA3.isSelected()) {
+            nombre = "Marvel Ultimate Alliance 3: The Black Order";
+            precio = 35;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoNintendoSwitch(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxSpiderMan.isSelected()) {
+            nombre = "Marvel's Spider-Man";
+            precio = 20;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoPS4(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxMinecraft.isSelected()) {
+            nombre = "Minecraft";
+            precio = 15;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxMortalKombat11.isSelected()) {
+            nombre = "Mortal Kombat 11";
+            precio = 35;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxNBA20.isSelected()) {
+            nombre = "NBA 2K20";
+            precio = 30;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxNBA21.isSelected()) {
+            nombre = "NBA 2K21";
+            precio = 43;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxOri.isSelected()) {
+            nombre = "Ori and the Will of the Wisps";
+            precio = 20;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoXboxOne(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxOverwatch.isSelected()) {
+            nombre = "Overwatch";
+            precio = 25;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxPES2020.isSelected()) {
+            nombre = "PES 2020";
+            precio = 18;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxPUBG.isSelected()) {
+            nombre = "Player Unknown Battlegrounds";
+            precio = 10;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxPokemon.isSelected()) {
+            nombre = "Pokémon: Espada y Escudo";
+            precio = 100;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoNintendoSwitch(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxQuantumBreak.isSelected()) {
+            nombre = "Quantum Break";
+            precio = 26;
+            exclusividad = "Sí";
+            Videojuego nuevoJuego = new VideojuegoXboxOne(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxSeaOfTheThieves.isSelected()) {
+            nombre = "Sea of Thieves";
+            precio = 29;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoXboxOne(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxSuperMarioOdyssey.isSelected()) {
+            nombre = "Super Mario Odyssey";
+            precio = 50;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoNintendoSwitch(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxSuperSmashBrosUltimate.isSelected()) {
+            nombre = "Super Smash Bros Ultimate";
+            precio = 50;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoNintendoSwitch(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxTLOU2.isSelected()) {
+            nombre = "The Last of Us Part 2";
+            precio = 48;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoPS4(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxZeldaBW.isSelected()) {
+            nombre = "The Legend of Zelda: Breath of the Wild";
+            precio = 40;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoNintendoSwitch(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxZeldaLA.isSelected()) {
+            nombre = "The Legend of Zelda: Link's Awakening";
+            precio = 40;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoNintendoSwitch(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxRainbowSixSiege.isSelected()) {
+            nombre = "Tom Clancy's Rainbow Six Siege";
+            precio = 15;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxUntilDawn.isSelected()) {
+            nombre = "Until Dawn";
+            precio = 26;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoPS4(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxWatchDogsLegion.isSelected()) {
+            nombre = "Watch Dogs: Legion";
+            precio = 70;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxXenobladeChronicles.isSelected()) {
+            nombre = "Xenoblade Chronicles: Definitive Edition";
+            precio = 45;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoNintendoSwitch(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxAssassinsCreedOdyssey.isSelected()) {
+            nombre = "Assassins Creed Odyssey";
+            precio = 24;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxAssassinsCreedOdyssey.isSelected()) {
+            nombre = "Assassins Creed Odyssey";
+            precio = 24;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if (Datos_juegos.cbxAssassinsCreedOdyssey.isSelected()) {
+            nombre = "Assassins Creed Odyssey";
+            precio = 24;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre, precio, exclusividad);
+            if (nuevoJuego.esExclusivo()) {
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        double precioTotalJuegos = 0;
+        double precioTotal=0;
+
+        for (Videojuego objeto : listaJuegos) {
+            precioTotalJuegos += objeto.getPrecio();
+        }
+        if (Gestion_Consolas.rbtNintendoSwitch.isSelected()) {
+            txtConsolaAdquirida.setText(Gestion_Consolas.rbtNintendoSwitch.getText());
+            txtPrecioConsola.setText((String) Gestion_Consolas.cmbPrecio.getSelectedItem());
+            precioTotal= precioTotalJuegos + Double.valueOf(txtPrecioConsola.getText());
+        }
+        if (Gestion_Consolas.rbtPS4.isSelected()) {
+            txtConsolaAdquirida.setText(Gestion_Consolas.rbtPS4.getText());
+            txtPrecioConsola.setText((String) Gestion_Consolas.cmbPrecio.getSelectedItem());
+             precioTotal= precioTotalJuegos + Double.valueOf(txtPrecioConsola.getText());
+        }
+        if (Gestion_Consolas.rbtXboxOne.isSelected()) {
+            txtConsolaAdquirida.setText(Gestion_Consolas.rbtXboxOne.getText());
+            txtPrecioConsola.setText((String) Gestion_Consolas.cmbPrecio.getSelectedItem());
+            precioTotal= precioTotalJuegos + Double.valueOf(txtPrecioConsola.getText());
+        }
+        if (Gestion_Consolas.rbtNingunaConsola.isSelected()) {
+            txtConsolaAdquirida.setText("");
+            txtPrecioConsola.setText("");
+            precioTotal= precioTotalJuegos + 0;
+        }
+        
+        txtValorAPagar.setText(String.valueOf(precioTotal));
+
+    }//GEN-LAST:event_txtApellidoKeyPressed
 
     /**
      * @param args the command line arguments
