@@ -15,7 +15,7 @@ public class Consola {
     private double precio;
 
     public Consola() {
-        System.out.println("Si me vale el commit");
+        
     }
 
     public String getCompañiaDeFabricacion() {
