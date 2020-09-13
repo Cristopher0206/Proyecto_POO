@@ -304,10 +304,11 @@ public class Datos_juegos extends javax.swing.JFrame {
                     .addComponent(cbxGearsOfWar4)
                     .addComponent(cbxPES2020))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cbxAssassinsCreedOdyssey)
-                    .addComponent(cbxGodOfWar)
-                    .addComponent(cbxPUBG))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cbxAssassinsCreedOdyssey, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(cbxGodOfWar)
+                        .addComponent(cbxPUBG)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cbxAssassinsCreedOrigins)
@@ -1022,7 +1023,7 @@ public class Datos_juegos extends javax.swing.JFrame {
             }
             listaJuegos.add(nuevoJuego);
         }
-        System.out.println(precio);
+        
         Datos_del_Comprador abrir = new Datos_del_Comprador();
         abrir.setVisible(true);
         this.setVisible(false);
@@ -1444,55 +1445,55 @@ public class Datos_juegos extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     protected static javax.swing.JCheckBox cbxAnimalCrossing;
-    private javax.swing.JCheckBox cbxAssassinsCreedOdyssey;
-    private javax.swing.JCheckBox cbxAssassinsCreedOrigins;
-    private javax.swing.JCheckBox cbxAssassinsCreedUnity;
-    private javax.swing.JCheckBox cbxBattlefield5;
-    private javax.swing.JCheckBox cbxBioshockInfinite;
-    private javax.swing.JCheckBox cbxCodMW;
-    private javax.swing.JCheckBox cbxDaysGone;
-    private javax.swing.JCheckBox cbxDeadByDaylight;
-    private javax.swing.JCheckBox cbxDragonBallFZ;
-    private javax.swing.JCheckBox cbxDragonBallX2;
-    private javax.swing.JCheckBox cbxFIFA20;
-    private javax.swing.JCheckBox cbxFallGuys;
-    private javax.swing.JCheckBox cbxForzaHorizon;
-    private javax.swing.JCheckBox cbxForzaMotorsport;
-    private javax.swing.JCheckBox cbxFriday13;
-    private javax.swing.JCheckBox cbxGears5;
-    private javax.swing.JCheckBox cbxGearsOfWar4;
-    private javax.swing.JCheckBox cbxGodOfWar;
-    private javax.swing.JCheckBox cbxGranTurismo;
-    private javax.swing.JCheckBox cbxHalo5;
-    private javax.swing.JCheckBox cbxHorizonZeroDawn;
-    private javax.swing.JCheckBox cbxInfamousSS;
-    private javax.swing.JCheckBox cbxInjustice2;
-    private javax.swing.JCheckBox cbxMUA3;
-    private javax.swing.JCheckBox cbxMarioKart8;
-    private javax.swing.JCheckBox cbxMarvelAvengers;
-    private javax.swing.JCheckBox cbxMinecraft;
-    private javax.swing.JCheckBox cbxMortalKombat11;
-    private javax.swing.JCheckBox cbxNBA20;
-    private javax.swing.JCheckBox cbxNBA21;
-    private javax.swing.JCheckBox cbxOri;
-    private javax.swing.JCheckBox cbxOverwatch;
-    private javax.swing.JCheckBox cbxPES2020;
-    private javax.swing.JCheckBox cbxPUBG;
-    private javax.swing.JCheckBox cbxPokemon;
-    private javax.swing.JCheckBox cbxQuantumBreak;
-    private javax.swing.JCheckBox cbxRainbowSixSiege;
-    private javax.swing.JCheckBox cbxRedDeadRedemption2;
-    private javax.swing.JCheckBox cbxRiseTombRaider;
-    private javax.swing.JCheckBox cbxSeaOfTheThieves;
-    private javax.swing.JCheckBox cbxSpiderMan;
-    private javax.swing.JCheckBox cbxSuperMarioOdyssey;
-    private javax.swing.JCheckBox cbxSuperSmashBrosUltimate;
-    private javax.swing.JCheckBox cbxTLOU2;
-    private javax.swing.JCheckBox cbxUntilDawn;
-    private javax.swing.JCheckBox cbxWatchDogsLegion;
-    private javax.swing.JCheckBox cbxXenobladeChronicles;
-    private javax.swing.JCheckBox cbxZeldaBW;
-    private javax.swing.JCheckBox cbxZeldaLA;
+    protected static javax.swing.JCheckBox cbxAssassinsCreedOdyssey;
+    protected static javax.swing.JCheckBox cbxAssassinsCreedOrigins;
+    protected static javax.swing.JCheckBox cbxAssassinsCreedUnity;
+    protected static javax.swing.JCheckBox cbxBattlefield5;
+    protected static javax.swing.JCheckBox cbxBioshockInfinite;
+    protected static javax.swing.JCheckBox cbxCodMW;
+    protected static javax.swing.JCheckBox cbxDaysGone;
+    protected static javax.swing.JCheckBox cbxDeadByDaylight;
+    protected static javax.swing.JCheckBox cbxDragonBallFZ;
+    protected static javax.swing.JCheckBox cbxDragonBallX2;
+    protected static javax.swing.JCheckBox cbxFIFA20;
+    protected static javax.swing.JCheckBox cbxFallGuys;
+    protected static javax.swing.JCheckBox cbxForzaHorizon;
+    protected static javax.swing.JCheckBox cbxForzaMotorsport;
+    protected static javax.swing.JCheckBox cbxFriday13;
+    protected static javax.swing.JCheckBox cbxGears5;
+    protected static javax.swing.JCheckBox cbxGearsOfWar4;
+    protected static javax.swing.JCheckBox cbxGodOfWar;
+    protected static javax.swing.JCheckBox cbxGranTurismo;
+    protected static javax.swing.JCheckBox cbxHalo5;
+    protected static javax.swing.JCheckBox cbxHorizonZeroDawn;
+    protected static javax.swing.JCheckBox cbxInfamousSS;
+    protected static javax.swing.JCheckBox cbxInjustice2;
+    protected static javax.swing.JCheckBox cbxMUA3;
+    protected static javax.swing.JCheckBox cbxMarioKart8;
+    protected static javax.swing.JCheckBox cbxMarvelAvengers;
+    protected static javax.swing.JCheckBox cbxMinecraft;
+    protected static javax.swing.JCheckBox cbxMortalKombat11;
+    protected static javax.swing.JCheckBox cbxNBA20;
+    protected static javax.swing.JCheckBox cbxNBA21;
+    protected static javax.swing.JCheckBox cbxOri;
+    protected static javax.swing.JCheckBox cbxOverwatch;
+    protected static javax.swing.JCheckBox cbxPES2020;
+    protected static javax.swing.JCheckBox cbxPUBG;
+    protected static javax.swing.JCheckBox cbxPokemon;
+    protected static javax.swing.JCheckBox cbxQuantumBreak;
+    protected static javax.swing.JCheckBox cbxRainbowSixSiege;
+    protected static javax.swing.JCheckBox cbxRedDeadRedemption2;
+    protected static javax.swing.JCheckBox cbxRiseTombRaider;
+    protected static javax.swing.JCheckBox cbxSeaOfTheThieves;
+    protected static javax.swing.JCheckBox cbxSpiderMan;
+    protected static javax.swing.JCheckBox cbxSuperMarioOdyssey;
+    protected static javax.swing.JCheckBox cbxSuperSmashBrosUltimate;
+    protected static javax.swing.JCheckBox cbxTLOU2;
+    protected static javax.swing.JCheckBox cbxUntilDawn;
+    protected static javax.swing.JCheckBox cbxWatchDogsLegion;
+    protected static javax.swing.JCheckBox cbxXenobladeChronicles;
+    protected static javax.swing.JCheckBox cbxZeldaBW;
+    protected static javax.swing.JCheckBox cbxZeldaLA;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;

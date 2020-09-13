@@ -199,10 +199,12 @@
                       <Component id="cbxPES2020" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="cbxAssassinsCreedOdyssey" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="cbxGodOfWar" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="cbxPUBG" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="cbxAssassinsCreedOdyssey" alignment="0" min="-2" pref="23" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="cbxGodOfWar" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cbxPUBG" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -303,21 +305,33 @@
             <Property name="text" type="java.lang.String" value="Assassin&apos;s Creed Odyssey ($24)"/>
             <Property name="actionCommand" type="java.lang.String" value="Assassin&apos;s Creed Odyssey ($35)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxAssassinsCreedOrigins">
           <Properties>
             <Property name="text" type="java.lang.String" value="Assassin&apos;s Creed Origins ($35)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxBioshockInfinite">
           <Properties>
             <Property name="text" type="java.lang.String" value="Bioshock Infinite ($10)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxBattlefield5">
           <Properties>
             <Property name="text" type="java.lang.String" value="Battlefield V ($27)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxAnimalCrossing">
           <Properties>
@@ -331,227 +345,362 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Call of Duty: Modern Warfare ($39)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxDeadByDaylight">
           <Properties>
             <Property name="text" type="java.lang.String" value="Dead by Daylight ($20)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxDragonBallFZ">
           <Properties>
             <Property name="text" type="java.lang.String" value="Dragon Ball FighterZ ($35)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxDragonBallX2">
           <Properties>
             <Property name="text" type="java.lang.String" value="Dragon Ball Xenoverse 2 ($25)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxFriday13">
           <Properties>
             <Property name="text" type="java.lang.String" value="Friday the 13th: The Game (15$)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxFallGuys">
           <Properties>
             <Property name="text" type="java.lang.String" value="Fall Guys Ultimate KnockOut ($10)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxAssassinsCreedUnity">
           <Properties>
             <Property name="text" type="java.lang.String" value="Assassin&apos;s Creed Unity ($20)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxDaysGone">
           <Properties>
             <Property name="text" type="java.lang.String" value="Days Gone ($33)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxFIFA20">
           <Properties>
             <Property name="text" type="java.lang.String" value="FIFA 2O ($35)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxForzaHorizon">
           <Properties>
             <Property name="text" type="java.lang.String" value="Forza Horizon 4 ($75)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxForzaMotorsport">
           <Properties>
             <Property name="text" type="java.lang.String" value="Forza Motorsport 7 ($25)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxGears5">
           <Properties>
             <Property name="text" type="java.lang.String" value="Gears 5 ($28)"/>
             <Property name="actionCommand" type="java.lang.String" value="Gears 5 "/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxGearsOfWar4">
           <Properties>
             <Property name="text" type="java.lang.String" value="Gears of War 4 ($15)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxGodOfWar">
           <Properties>
             <Property name="text" type="java.lang.String" value="God of War ($20)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxGranTurismo">
           <Properties>
             <Property name="text" type="java.lang.String" value="Gran Turismo Sport ($15)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxHalo5">
           <Properties>
             <Property name="text" type="java.lang.String" value="Halo 5: Guardians ($20)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxHorizonZeroDawn">
           <Properties>
             <Property name="text" type="java.lang.String" value="Horizon Zero Dawn ($20)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxInfamousSS">
           <Properties>
             <Property name="text" type="java.lang.String" value="Infamous Second Son ($15)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxInjustice2">
           <Properties>
             <Property name="text" type="java.lang.String" value="Injustice 2 ($17)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxMarioKart8">
           <Properties>
             <Property name="text" type="java.lang.String" value="Mario Kart 8 Deluxe (45)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxMarvelAvengers">
           <Properties>
             <Property name="text" type="java.lang.String" value="Marvel&apos;s Avengers ($47)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxMUA3">
           <Properties>
             <Property name="text" type="java.lang.String" value="Marvel Ultimate Alliance 3: The Black Order ($35)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxSpiderMan">
           <Properties>
             <Property name="text" type="java.lang.String" value="Marvel&apos;s Spider-Man ($20)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxMinecraft">
           <Properties>
             <Property name="text" type="java.lang.String" value="Minecraft ($15)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxMortalKombat11">
           <Properties>
             <Property name="text" type="java.lang.String" value="Mortal Kombat 11 (35)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxNBA20">
           <Properties>
             <Property name="text" type="java.lang.String" value="NBA 2K20 ($30)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxNBA21">
           <Properties>
             <Property name="text" type="java.lang.String" value="NBA 2K21 ($43)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxOri">
           <Properties>
             <Property name="text" type="java.lang.String" value="Ori and the Will of the Wisps ($20)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxOverwatch">
           <Properties>
             <Property name="text" type="java.lang.String" value="Overwatch ($25)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxTLOU2">
           <Properties>
             <Property name="text" type="java.lang.String" value="The Last of Us Part 2 ($48)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxSuperSmashBrosUltimate">
           <Properties>
             <Property name="text" type="java.lang.String" value="Super Smash Bros Ultimate ($50)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxSeaOfTheThieves">
           <Properties>
             <Property name="text" type="java.lang.String" value="Sea of Thieves ($29)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxRiseTombRaider">
           <Properties>
             <Property name="text" type="java.lang.String" value="Rise of the Tomb Raider ($20)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxRedDeadRedemption2">
           <Properties>
             <Property name="text" type="java.lang.String" value="Red Dead Redemption 2 ($49)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxSuperMarioOdyssey">
           <Properties>
             <Property name="text" type="java.lang.String" value="Super Mario Odyssey ($50)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxQuantumBreak">
           <Properties>
             <Property name="text" type="java.lang.String" value="Quantum Break ($26)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxPokemon">
           <Properties>
             <Property name="text" type="java.lang.String" value="Pok&#xe9;mon: Espada y Escudo ($100)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxPUBG">
           <Properties>
             <Property name="text" type="java.lang.String" value="Player Unknown Battlegrounds ($10)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxPES2020">
           <Properties>
             <Property name="text" type="java.lang.String" value="PES 2020 ($18)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxZeldaBW">
           <Properties>
             <Property name="text" type="java.lang.String" value="The Legend of Zelda: Breath of the Wild ($40)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxZeldaLA">
           <Properties>
             <Property name="text" type="java.lang.String" value="The Legend Of Zelda: Link&apos;s Awakening ($40)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxRainbowSixSiege">
           <Properties>
             <Property name="text" type="java.lang.String" value="Tom Clancy&apos;s Rainbow Six Siege ($15)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxUntilDawn">
           <Properties>
             <Property name="text" type="java.lang.String" value="Until Dawn ($26)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxWatchDogsLegion">
           <Properties>
             <Property name="text" type="java.lang.String" value="Watch Dogs: Legion ($70)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxXenobladeChronicles">
           <Properties>
             <Property name="text" type="java.lang.String" value="Xenoblade Chronicles: Definitive Edition ($45)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
       </SubComponents>
     </Container>
