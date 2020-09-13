@@ -6,6 +6,7 @@
 package proyecto_poo_;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import javax.swing.JOptionPane;
 
 /**
@@ -15,6 +16,7 @@ import javax.swing.JOptionPane;
 public class Datos_juegos extends javax.swing.JFrame {
 
     ArrayList<Videojuego> listaJuegos = new ArrayList<>();
+    
 
     /**
      * Creates new form Datos_juegos
@@ -22,6 +24,8 @@ public class Datos_juegos extends javax.swing.JFrame {
     public Datos_juegos() {
         initComponents();
     }
+    private double precio;
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -516,7 +520,7 @@ public class Datos_juegos extends javax.swing.JFrame {
     private void btnGuardarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarJuegoActionPerformed
         // TODO add your handling code here:
         String nombre = "";
-        double precio = 0;
+        double precio=0;
         String exclusividad = "";
         if(cbxAnimalCrossing.isSelected()){
             nombre = "Animal Crossing: New Horizons";
@@ -1018,6 +1022,10 @@ public class Datos_juegos extends javax.swing.JFrame {
             }
             listaJuegos.add(nuevoJuego);
         }
+        System.out.println(precio);
+        Datos_del_Comprador abrir = new Datos_del_Comprador();
+        abrir.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btnGuardarJuegoActionPerformed
 
     private void btnAplicarFiltroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAplicarFiltroActionPerformed
@@ -1426,6 +1434,8 @@ public class Datos_juegos extends javax.swing.JFrame {
             }
         });
     }
+   
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup btgGéneroJuego;
@@ -1433,7 +1443,7 @@ public class Datos_juegos extends javax.swing.JFrame {
     private javax.swing.JButton btnGuardarJuego;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
-    private javax.swing.JCheckBox cbxAnimalCrossing;
+    protected static javax.swing.JCheckBox cbxAnimalCrossing;
     private javax.swing.JCheckBox cbxAssassinsCreedOdyssey;
     private javax.swing.JCheckBox cbxAssassinsCreedOrigins;
     private javax.swing.JCheckBox cbxAssassinsCreedUnity;
@@ -1496,3 +1506,4 @@ public class Datos_juegos extends javax.swing.JFrame {
     private javax.swing.JRadioButton rbtXboxOne_1;
     // End of variables declaration//GEN-END:variables
 }
+

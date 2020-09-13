@@ -323,6 +323,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Animal Crossing: New Horizons ($55)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="12"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cbxCodMW">
           <Properties>
