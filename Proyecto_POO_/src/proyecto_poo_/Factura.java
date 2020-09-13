@@ -17,22 +17,22 @@ public class Factura {
     private String nombre;
     private String apellido;
     private String numCedula;
-    ArrayList <Consola> consola;
-    ArrayList <Videojuego> videojuego;
-    ArrayList <String> complemento;
+    Consola consola;
+    ArrayList <Videojuego> listaJuegos;
+    String complemento;
     private double valorAPagar;
 
     public Factura() {
     }
 
-    public Factura(int numFactura, String fecha, String nombre, String apellido, String numCedula, ArrayList<Consola> consola, ArrayList<Videojuego> videojuego, ArrayList<String> complemento, double valorAPagar) {
+    public Factura(int numFactura, String fecha, String nombre, String apellido, String numCedula, Consola consola, ArrayList<Videojuego> videojuegos, String complemento, double valorAPagar) {
         this.numFactura = numFactura;
         this.fecha = fecha;
         this.nombre = nombre;
         this.apellido = apellido;
         this.numCedula = numCedula;
         this.consola = consola;
-        this.videojuego = videojuego;
+        this.listaJuegos = videojuegos;
         this.complemento = complemento;
         this.valorAPagar = valorAPagar;
     }
@@ -77,27 +77,27 @@ public class Factura {
         this.numCedula = numCedula;
     }
 
-    public ArrayList<Consola> getConsola() {
+    public Consola getConsola() {
         return consola;
     }
 
-    public void setConsola(ArrayList<Consola> consola) {
+    public void setConsola(Consola consola) {
         this.consola = consola;
     }
 
-    public ArrayList<Videojuego> getVideojuego() {
-        return videojuego;
+    public ArrayList<Videojuego> getListaJuegos() {
+        return listaJuegos;
     }
 
-    public void setVideojuego(ArrayList<Videojuego> videojuego) {
-        this.videojuego = videojuego;
+    public void setListaJuegos(ArrayList<Videojuego> listaJuegos) {
+        this.listaJuegos = listaJuegos;
     }
 
-    public ArrayList<String> getComplemento() {
+    public String getComplemento() {
         return complemento;
     }
 
-    public void setComplemento(ArrayList<String> complemento) {
+    public void setComplemento(String complemento) {
         this.complemento = complemento;
     }
 
@@ -122,7 +122,7 @@ public class Factura {
                "Apellido del Cliente: " + apellido + "\n" + 
                "Número de Cédula: " + numCedula + "\n" + 
                "Modelo de Consola: " + consola + "\n" + 
-               "Videojuegos: " + videojuego + "\n" + 
+               "Videojuegos: " + listaJuegos + "\n" + 
                "Complemento adquirido: " + complemento + "\n" + 
                "Valor a pagar: " + valorAPagar;
     }

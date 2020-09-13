@@ -5,11 +5,16 @@
  */
 package proyecto_poo_;
 
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Pavilion
  */
 public class Datos_juegos extends javax.swing.JFrame {
+
+    ArrayList<Videojuego> listaJuegos = new ArrayList<>();
 
     /**
      * Creates new form Datos_juegos
@@ -33,195 +38,1359 @@ public class Datos_juegos extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         btnGuardarJuego = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
+        cbxAssassinsCreedOdyssey = new javax.swing.JCheckBox();
+        cbxAssassinsCreedOrigins = new javax.swing.JCheckBox();
+        cbxBioshockInfinite = new javax.swing.JCheckBox();
+        cbxBattlefield5 = new javax.swing.JCheckBox();
+        cbxAnimalCrossing = new javax.swing.JCheckBox();
+        cbxCodMW = new javax.swing.JCheckBox();
+        cbxDeadByDaylight = new javax.swing.JCheckBox();
+        cbxDragonBallFZ = new javax.swing.JCheckBox();
+        cbxDragonBallX2 = new javax.swing.JCheckBox();
+        cbxFriday13 = new javax.swing.JCheckBox();
+        cbxFallGuys = new javax.swing.JCheckBox();
+        cbxAssassinsCreedUnity = new javax.swing.JCheckBox();
+        cbxDaysGone = new javax.swing.JCheckBox();
+        cbxFIFA20 = new javax.swing.JCheckBox();
+        cbxForzaHorizon = new javax.swing.JCheckBox();
+        cbxForzaMotorsport = new javax.swing.JCheckBox();
+        cbxGears5 = new javax.swing.JCheckBox();
+        cbxGearsOfWar4 = new javax.swing.JCheckBox();
+        cbxGodOfWar = new javax.swing.JCheckBox();
+        cbxGranTurismo = new javax.swing.JCheckBox();
+        cbxHalo5 = new javax.swing.JCheckBox();
+        cbxHorizonZeroDawn = new javax.swing.JCheckBox();
+        cbxInfamousSS = new javax.swing.JCheckBox();
+        cbxInjustice2 = new javax.swing.JCheckBox();
+        cbxMarioKart8 = new javax.swing.JCheckBox();
+        cbxMarvelAvengers = new javax.swing.JCheckBox();
+        cbxMUA3 = new javax.swing.JCheckBox();
+        cbxSpiderMan = new javax.swing.JCheckBox();
+        cbxMinecraft = new javax.swing.JCheckBox();
+        cbxMortalKombat11 = new javax.swing.JCheckBox();
+        cbxNBA20 = new javax.swing.JCheckBox();
+        cbxNBA21 = new javax.swing.JCheckBox();
+        cbxOri = new javax.swing.JCheckBox();
+        cbxOverwatch = new javax.swing.JCheckBox();
+        cbxTLOU2 = new javax.swing.JCheckBox();
+        cbxSuperSmashBrosUltimate = new javax.swing.JCheckBox();
+        cbxSeaOfTheThieves = new javax.swing.JCheckBox();
+        cbxRiseTombRaider = new javax.swing.JCheckBox();
+        cbxRedDeadRedemption2 = new javax.swing.JCheckBox();
+        cbxSuperMarioOdyssey = new javax.swing.JCheckBox();
+        cbxQuantumBreak = new javax.swing.JCheckBox();
+        cbxPokemon = new javax.swing.JCheckBox();
+        cbxPUBG = new javax.swing.JCheckBox();
+        cbxPES2020 = new javax.swing.JCheckBox();
+        cbxZeldaBW = new javax.swing.JCheckBox();
+        cbxZeldaLA = new javax.swing.JCheckBox();
+        cbxRainbowSixSiege = new javax.swing.JCheckBox();
+        cbxUntilDawn = new javax.swing.JCheckBox();
+        cbxWatchDogsLegion = new javax.swing.JCheckBox();
+        cbxXenobladeChronicles = new javax.swing.JCheckBox();
         jPanel4 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        rbtnPS4 = new javax.swing.JRadioButton();
-        rbtnXboxOne = new javax.swing.JRadioButton();
-        rbtnNintentoSwitch = new javax.swing.JRadioButton();
         lblExclusividad = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
+        btnAplicarFiltro = new javax.swing.JButton();
         rbtSi = new javax.swing.JRadioButton();
         rbtNo = new javax.swing.JRadioButton();
-        lblGenero = new javax.swing.JLabel();
-        cmbGenero = new javax.swing.JComboBox<>();
-        jLabel3 = new javax.swing.JLabel();
+        lblTipoConsola = new javax.swing.JLabel();
+        rbtPS4_1 = new javax.swing.JRadioButton();
+        rbtXboxOne_1 = new javax.swing.JRadioButton();
+        rbtNintendoSwitch_1 = new javax.swing.JRadioButton();
+        rbtRestablecer = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setText("VIDEOJUEGOS");
 
-        btnGuardarJuego.setText("Guardar");
+        btnGuardarJuego.setText("Guardar Juegos");
+        btnGuardarJuego.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarJuegoActionPerformed(evt);
+            }
+        });
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "Catálogo"));
+
+        cbxAssassinsCreedOdyssey.setText("Assassin's Creed Odyssey ($24)");
+        cbxAssassinsCreedOdyssey.setActionCommand("Assassin's Creed Odyssey ($35)");
+
+        cbxAssassinsCreedOrigins.setText("Assassin's Creed Origins ($35)");
+
+        cbxBioshockInfinite.setText("Bioshock Infinite ($10)");
+
+        cbxBattlefield5.setText("Battlefield V ($27)");
+
+        cbxAnimalCrossing.setText("Animal Crossing: New Horizons ($55)");
+
+        cbxCodMW.setText("Call of Duty: Modern Warfare ($39)");
+
+        cbxDeadByDaylight.setText("Dead by Daylight ($20)");
+
+        cbxDragonBallFZ.setText("Dragon Ball FighterZ ($35)");
+
+        cbxDragonBallX2.setText("Dragon Ball Xenoverse 2 ($25)");
+
+        cbxFriday13.setText("Friday the 13th: The Game (15$)");
+
+        cbxFallGuys.setText("Fall Guys Ultimate KnockOut ($10)");
+
+        cbxAssassinsCreedUnity.setText("Assassin's Creed Unity ($20)");
+
+        cbxDaysGone.setText("Days Gone ($33)");
+
+        cbxFIFA20.setText("FIFA 2O ($35)");
+
+        cbxForzaHorizon.setText("Forza Horizon 4 ($75)");
+
+        cbxForzaMotorsport.setText("Forza Motorsport 7 ($25)");
+
+        cbxGears5.setText("Gears 5 ($28)");
+        cbxGears5.setActionCommand("Gears 5 ");
+
+        cbxGearsOfWar4.setText("Gears of War 4 ($15)");
+
+        cbxGodOfWar.setText("God of War ($20)");
+
+        cbxGranTurismo.setText("Gran Turismo Sport ($15)");
+
+        cbxHalo5.setText("Halo 5: Guardians ($20)");
+
+        cbxHorizonZeroDawn.setText("Horizon Zero Dawn ($20)");
+
+        cbxInfamousSS.setText("Infamous Second Son ($15)");
+
+        cbxInjustice2.setText("Injustice 2 ($17)");
+
+        cbxMarioKart8.setText("Mario Kart 8 Deluxe (45)");
+
+        cbxMarvelAvengers.setText("Marvel's Avengers ($47)");
+
+        cbxMUA3.setText("Marvel Ultimate Alliance 3: The Black Order ($35)");
+
+        cbxSpiderMan.setText("Marvel's Spider-Man ($20)");
+
+        cbxMinecraft.setText("Minecraft ($15)");
+
+        cbxMortalKombat11.setText("Mortal Kombat 11 (35)");
+
+        cbxNBA20.setText("NBA 2K20 ($30)");
+
+        cbxNBA21.setText("NBA 2K21 ($43)");
+
+        cbxOri.setText("Ori and the Will of the Wisps ($20)");
+
+        cbxOverwatch.setText("Overwatch ($25)");
+
+        cbxTLOU2.setText("The Last of Us Part 2 ($48)");
+
+        cbxSuperSmashBrosUltimate.setText("Super Smash Bros Ultimate ($50)");
+
+        cbxSeaOfTheThieves.setText("Sea of Thieves ($29)");
+
+        cbxRiseTombRaider.setText("Rise of the Tomb Raider ($20)");
+
+        cbxRedDeadRedemption2.setText("Red Dead Redemption 2 ($49)");
+
+        cbxSuperMarioOdyssey.setText("Super Mario Odyssey ($50)");
+
+        cbxQuantumBreak.setText("Quantum Break ($26)");
+
+        cbxPokemon.setText("Pokémon: Espada y Escudo ($100)");
+
+        cbxPUBG.setText("Player Unknown Battlegrounds ($10)");
+
+        cbxPES2020.setText("PES 2020 ($18)");
+
+        cbxZeldaBW.setText("The Legend of Zelda: Breath of the Wild ($40)");
+
+        cbxZeldaLA.setText("The Legend Of Zelda: Link's Awakening ($40)");
+
+        cbxRainbowSixSiege.setText("Tom Clancy's Rainbow Six Siege ($15)");
+
+        cbxUntilDawn.setText("Until Dawn ($26)");
+
+        cbxWatchDogsLegion.setText("Watch Dogs: Legion ($70)");
+
+        cbxXenobladeChronicles.setText("Xenoblade Chronicles: Definitive Edition ($45)");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 560, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cbxAnimalCrossing)
+                    .addComponent(cbxAssassinsCreedOdyssey)
+                    .addComponent(cbxAssassinsCreedOrigins)
+                    .addComponent(cbxAssassinsCreedUnity)
+                    .addComponent(cbxBattlefield5)
+                    .addComponent(cbxBioshockInfinite)
+                    .addComponent(cbxCodMW)
+                    .addComponent(cbxDaysGone)
+                    .addComponent(cbxDeadByDaylight)
+                    .addComponent(cbxDragonBallFZ)
+                    .addComponent(cbxDragonBallX2)
+                    .addComponent(cbxFallGuys)
+                    .addComponent(cbxFIFA20)
+                    .addComponent(cbxForzaHorizon)
+                    .addComponent(cbxForzaMotorsport)
+                    .addComponent(cbxFriday13)
+                    .addComponent(cbxGears5))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(cbxOri, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(cbxNBA21, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(cbxNBA20, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(cbxMinecraft, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(cbxGranTurismo, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(cbxHalo5, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(cbxInfamousSS, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(cbxMarvelAvengers, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(cbxMUA3, javax.swing.GroupLayout.Alignment.LEADING))
+                            .addGap(35, 35, 35))
+                        .addGroup(jPanel3Layout.createSequentialGroup()
+                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(cbxOverwatch, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(cbxHorizonZeroDawn, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(cbxInjustice2, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(cbxSpiderMan, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(cbxMortalKombat11, javax.swing.GroupLayout.Alignment.LEADING))
+                            .addGap(143, 143, 143)))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cbxGearsOfWar4)
+                            .addComponent(cbxGodOfWar)
+                            .addComponent(cbxMarioKart8))
+                        .addGap(151, 151, 151)))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cbxPUBG)
+                            .addComponent(cbxPES2020)
+                            .addComponent(cbxPokemon)
+                            .addComponent(cbxQuantumBreak))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(cbxRedDeadRedemption2, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cbxSeaOfTheThieves, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cbxRiseTombRaider, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cbxSuperMarioOdyssey, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cbxSuperSmashBrosUltimate, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cbxUntilDawn, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cbxRainbowSixSiege, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cbxWatchDogsLegion, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cbxXenobladeChronicles, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cbxZeldaLA, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cbxZeldaBW, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cbxTLOU2, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 445, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbxAnimalCrossing)
+                    .addComponent(cbxGearsOfWar4)
+                    .addComponent(cbxPES2020))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbxAssassinsCreedOdyssey)
+                    .addComponent(cbxGodOfWar)
+                    .addComponent(cbxPUBG))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbxAssassinsCreedOrigins)
+                    .addComponent(cbxGranTurismo)
+                    .addComponent(cbxPokemon))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbxAssassinsCreedUnity, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cbxHalo5)
+                    .addComponent(cbxQuantumBreak))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbxBattlefield5)
+                    .addComponent(cbxHorizonZeroDawn)
+                    .addComponent(cbxRedDeadRedemption2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbxBioshockInfinite)
+                    .addComponent(cbxInfamousSS)
+                    .addComponent(cbxRiseTombRaider))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbxCodMW)
+                    .addComponent(cbxInjustice2)
+                    .addComponent(cbxSeaOfTheThieves))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbxDaysGone)
+                    .addComponent(cbxMarioKart8)
+                    .addComponent(cbxSuperMarioOdyssey))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbxDeadByDaylight)
+                    .addComponent(cbxMarvelAvengers)
+                    .addComponent(cbxSuperSmashBrosUltimate))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbxDragonBallFZ)
+                    .addComponent(cbxMUA3)
+                    .addComponent(cbxTLOU2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbxDragonBallX2)
+                    .addComponent(cbxSpiderMan)
+                    .addComponent(cbxZeldaBW))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbxFallGuys)
+                    .addComponent(cbxMinecraft)
+                    .addComponent(cbxZeldaLA))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbxFIFA20)
+                    .addComponent(cbxMortalKombat11)
+                    .addComponent(cbxRainbowSixSiege))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbxForzaHorizon)
+                    .addComponent(cbxNBA20)
+                    .addComponent(cbxUntilDawn))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbxForzaMotorsport)
+                    .addComponent(cbxNBA21)
+                    .addComponent(cbxWatchDogsLegion))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbxFriday13)
+                    .addComponent(cbxOri)
+                    .addComponent(cbxXenobladeChronicles))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbxGears5)
+                    .addComponent(cbxOverwatch))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "Filtros"));
+        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "Filtros (opcional)"));
 
-        buttonGroup2.add(rbtnPS4);
-        rbtnPS4.setText("PS4");
+        lblExclusividad.setText("¿Mostrar juegos exclusivos?");
 
-        buttonGroup2.add(rbtnXboxOne);
-        rbtnXboxOne.setText("XBox One");
-        rbtnXboxOne.setToolTipText("");
-        rbtnXboxOne.addActionListener(new java.awt.event.ActionListener() {
+        btnAplicarFiltro.setText("Aplicar Filtro");
+        btnAplicarFiltro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rbtnXboxOneActionPerformed(evt);
+                btnAplicarFiltroActionPerformed(evt);
             }
         });
 
-        buttonGroup2.add(rbtnNintentoSwitch);
-        rbtnNintentoSwitch.setText("Nintento Switch");
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(rbtnPS4)
-                    .addComponent(rbtnXboxOne))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(rbtnNintentoSwitch)
-                .addContainerGap())
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(rbtnPS4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(rbtnXboxOne)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(rbtnNintentoSwitch)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        lblExclusividad.setText("Exclusividad");
-
         buttonGroup1.add(rbtSi);
-        rbtSi.setText("Si");
+        rbtSi.setText("Si (solo se mostrarán los juegos exclusivos de la consola que seleccione)");
 
         buttonGroup1.add(rbtNo);
-        rbtNo.setText("No");
+        rbtNo.setText("No (se mostrarán todos los juegos de la consola que seleccione)");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(rbtNo)
-                    .addComponent(rbtSi))
-                .addContainerGap(15, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(rbtSi)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(rbtNo)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        lblTipoConsola.setText("Consola");
 
-        lblGenero.setText("Género");
+        buttonGroup2.add(rbtPS4_1);
+        rbtPS4_1.setText("PS4");
 
-        cmbGenero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Aventura", "Disparos", "Estrategia", "Lucha", "Survival Horror", "Plataformas", "RPG", "Deportivo", "Carreras" }));
-        cmbGenero.setToolTipText("");
+        buttonGroup2.add(rbtXboxOne_1);
+        rbtXboxOne_1.setText("XBox One");
+        rbtXboxOne_1.setToolTipText("");
 
-        jLabel3.setText("Tipos de Consola");
+        buttonGroup2.add(rbtNintendoSwitch_1);
+        rbtNintendoSwitch_1.setText("Nintento Switch");
+
+        rbtRestablecer.setText("Restablecer");
+        rbtRestablecer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbtRestablecerActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
+                .addGap(20, 20, 20)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(107, 107, 107)
+                    .addComponent(rbtNo)
+                    .addComponent(rbtSi))
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblExclusividad))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblGenero)
-                    .addComponent(cmbGenero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(23, 23, 23))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(rbtPS4_1)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(rbtXboxOne_1)
+                                    .addGroup(jPanel4Layout.createSequentialGroup()
+                                        .addComponent(rbtNintendoSwitch_1)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(rbtRestablecer)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnAplicarFiltro))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblExclusividad)
+                                    .addComponent(lblTipoConsola))
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addContainerGap())))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(lblExclusividad)
-                    .addComponent(lblGenero))
+                .addComponent(lblExclusividad)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 4, Short.MAX_VALUE)
+                .addComponent(rbtSi)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(rbtNo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cmbGenero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(12, Short.MAX_VALUE))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(lblTipoConsola)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(rbtPS4_1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(rbtXboxOne_1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(rbtNintendoSwitch_1))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnAplicarFiltro)
+                        .addComponent(rbtRestablecer)))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(354, 354, 354)
+                        .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(250, 250, 250)
-                                .addComponent(jLabel1))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(254, 254, 254)
-                                .addComponent(btnGuardarJuego)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addGap(185, 185, 185)
+                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(336, 336, 336)
+                        .addComponent(btnGuardarJuego)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(5, 5, 5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnGuardarJuego)
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void rbtnXboxOneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtnXboxOneActionPerformed
+    private void btnGuardarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarJuegoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_rbtnXboxOneActionPerformed
+        String nombre = "";
+        double precio = 0;
+        String exclusividad = "";
+        if(cbxAnimalCrossing.isSelected()){
+            nombre = "Animal Crossing: New Horizons";
+            precio = 55;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoNintendoSwitch(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxAssassinsCreedOdyssey.isSelected()){
+            nombre = "Assassins Creed Odyssey";
+            precio = 24;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxAssassinsCreedOrigins.isSelected()){
+            nombre = "Assassins Creed Origins";
+            precio = 35;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxAssassinsCreedOdyssey.isSelected()){
+            nombre = "Assassins Creed Unity";
+            precio = 20;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxBattlefield5.isSelected()){
+            nombre = "Battlefield V";
+            precio = 27;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxBioshockInfinite.isSelected()){
+            nombre = "Bioshock Infinite";
+            precio = 10;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxCodMW.isSelected()){
+            nombre = "Call of Duty: Modern Warfare";
+            precio = 39;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxDaysGone.isSelected()){
+            nombre = "Days Gone";
+            precio = 33;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoPS4(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxDeadByDaylight.isSelected()){
+            nombre = "Dead by Daylight";
+            precio = 20;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxDragonBallFZ.isSelected()){
+            nombre = "Dragon Ball FighterZ";
+            precio = 35;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxDragonBallX2.isSelected()){
+            nombre = "Dragon Ball Xenoverse 2";
+            precio = 25;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxFallGuys.isSelected()){
+            nombre = "Fall Guys Ultimate Knockout";
+            precio = 10;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxFIFA20.isSelected()){
+            nombre = "FIFA 20";
+            precio = 35;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxForzaHorizon.isSelected()){
+            nombre = "Forza Horizon 4";
+            precio = 75;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoXboxOne(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxForzaMotorsport.isSelected()){
+            nombre = "Forza Motorsport 7";
+            precio = 25;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoXboxOne(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxFriday13.isSelected()){
+            nombre = "Friday the 13th: The Game";
+            precio = 15;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxGears5.isSelected()){
+            nombre = "Gears 5";
+            precio = 28;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoXboxOne(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxGearsOfWar4.isSelected()){
+            nombre = "Gears of War 4";
+            precio = 15;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoXboxOne(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxGodOfWar.isSelected()){
+            nombre = "God of War";
+            precio = 20;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoPS4(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxGranTurismo.isSelected()){
+            nombre = "Gran Turismo Sport";
+            precio = 15;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoPS4(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxHalo5.isSelected()){
+            nombre = "HALO 5: Guardians";
+            precio = 20;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoXboxOne(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxHorizonZeroDawn.isSelected()){
+            nombre = "Horizon Zero Dawn";
+            precio = 20;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoPS4(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxInfamousSS.isSelected()){
+            nombre = "Infamous Second Son";
+            precio = 15;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoPS4(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxMarioKart8.isSelected()){
+            nombre = "Mario Kart 8 Deluxe";
+            precio = 45;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoNintendoSwitch(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxMarvelAvengers.isSelected()){
+            nombre = "Marvel's Avengers";
+            precio = 47;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxMUA3.isSelected()){
+            nombre = "Marvel Ultimate Alliance 3: The Black Order";
+            precio = 35;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoNintendoSwitch(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxSpiderMan.isSelected()){
+            nombre = "Marvel's Spider-Man";
+            precio = 20;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoPS4(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxMinecraft.isSelected()){
+            nombre = "Minecraft";
+            precio = 15;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxMortalKombat11.isSelected()){
+            nombre = "Mortal Kombat 11";
+            precio = 35;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxNBA20.isSelected()){
+            nombre = "NBA 2K20";
+            precio = 30;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxNBA21.isSelected()){
+            nombre = "NBA 2K21";
+            precio = 43;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxOri.isSelected()){
+            nombre = "Ori and the Will of the Wisps";
+            precio = 20;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoXboxOne(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxOverwatch.isSelected()){
+            nombre = "Overwatch";
+            precio = 25;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxPES2020.isSelected()){
+            nombre = "PES 2020";
+            precio = 18;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxPUBG.isSelected()){
+            nombre = "Player Unknown Battlegrounds";
+            precio = 10;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxPokemon.isSelected()){
+            nombre = "Pokémon: Espada y Escudo";
+            precio = 100;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoNintendoSwitch(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxQuantumBreak.isSelected()){
+            nombre = "Quantum Break";
+            precio = 26;
+            exclusividad = "Sí";
+            Videojuego nuevoJuego = new VideojuegoXboxOne(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxSeaOfTheThieves.isSelected()){
+            nombre = "Sea of Thieves";
+            precio = 29;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoXboxOne(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxSuperMarioOdyssey.isSelected()){
+            nombre = "Super Mario Odyssey";
+            precio = 50;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoNintendoSwitch(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxSuperSmashBrosUltimate.isSelected()){
+            nombre = "Super Smash Bros Ultimate";
+            precio = 50;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoNintendoSwitch(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxTLOU2.isSelected()){
+            nombre = "The Last of Us Part 2";
+            precio = 48;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoPS4(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxZeldaBW.isSelected()){
+            nombre = "The Legend of Zelda: Breath of the Wild";
+            precio = 40;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoNintendoSwitch(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxZeldaLA.isSelected()){
+            nombre = "The Legend of Zelda: Link's Awakening";
+            precio = 40;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoNintendoSwitch(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxRainbowSixSiege.isSelected()){
+            nombre = "Tom Clancy's Rainbow Six Siege";
+            precio = 15;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxUntilDawn.isSelected()){
+            nombre = "Until Dawn";
+            precio = 26;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoPS4(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxWatchDogsLegion.isSelected()){
+            nombre = "Watch Dogs: Legion";
+            precio = 70;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxXenobladeChronicles.isSelected()){
+            nombre = "Xenoblade Chronicles: Definitive Edition";
+            precio = 45;
+            exclusividad = "Si";
+            Videojuego nuevoJuego = new VideojuegoNintendoSwitch(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxAssassinsCreedOdyssey.isSelected()){
+            nombre = "Assassins Creed Odyssey";
+            precio = 24;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxAssassinsCreedOdyssey.isSelected()){
+            nombre = "Assassins Creed Odyssey";
+            precio = 24;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxAssassinsCreedOdyssey.isSelected()){
+            nombre = "Assassins Creed Odyssey";
+            precio = 24;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+    }//GEN-LAST:event_btnGuardarJuegoActionPerformed
+
+    private void btnAplicarFiltroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAplicarFiltroActionPerformed
+        // TODO add your handling code here:
+        if (rbtPS4_1.isSelected() && rbtNo.isSelected()) {
+            // Desactiva juegos de otras consolas
+            cbxGears5.setEnabled(false);
+            cbxHalo5.setEnabled(false);
+            cbxGearsOfWar4.setEnabled(false);
+            cbxOri.setEnabled(false);
+            cbxForzaMotorsport.setEnabled(false);
+            cbxForzaHorizon.setEnabled(false);
+            cbxSeaOfTheThieves.setEnabled(false);
+            cbxQuantumBreak.setEnabled(false);
+            cbxMUA3.setEnabled(false);
+            cbxXenobladeChronicles.setEnabled(false);
+            cbxAnimalCrossing.setEnabled(false);
+            cbxZeldaBW.setEnabled(false);
+            cbxSuperMarioOdyssey.setEnabled(false);
+            cbxPokemon.setEnabled(false);
+            cbxZeldaLA.setEnabled(false);
+            cbxMarioKart8.setEnabled(false);
+            cbxSuperSmashBrosUltimate.setEnabled(false);
+            // Activa los demás juegos
+            cbxBioshockInfinite.setEnabled(true);
+            cbxRiseTombRaider.setEnabled(true);
+            cbxMarvelAvengers.setEnabled(true);
+            cbxMinecraft.setEnabled(true);
+            cbxRedDeadRedemption2.setEnabled(true);
+            cbxMortalKombat11.setEnabled(true);
+            cbxInjustice2.setEnabled(true);
+            cbxDragonBallX2.setEnabled(true);
+            cbxDragonBallFZ.setEnabled(true);
+            cbxCodMW.setEnabled(true);
+            cbxBattlefield5.setEnabled(true);
+            cbxPUBG.setEnabled(true);
+            cbxDeadByDaylight.setEnabled(true);
+            cbxOverwatch.setEnabled(true);
+            cbxRainbowSixSiege.setEnabled(true);
+            cbxFriday13.setEnabled(true);
+            cbxAssassinsCreedOdyssey.setEnabled(true);
+            cbxAssassinsCreedOrigins.setEnabled(true);
+            cbxAssassinsCreedUnity.setEnabled(true);
+            cbxWatchDogsLegion.setEnabled(true);
+            cbxFIFA20.setEnabled(true);
+            cbxPES2020.setEnabled(true);
+            cbxNBA20.setEnabled(true);
+            cbxNBA21.setEnabled(true);
+            cbxPES2020.setEnabled(true);
+            cbxFallGuys.setEnabled(true);
+        } else if (rbtPS4_1.isSelected() && rbtSi.isSelected()) {
+            // Desactiva exclusivos de otras consolas
+            cbxGears5.setEnabled(false);
+            cbxHalo5.setEnabled(false);
+            cbxGearsOfWar4.setEnabled(false);
+            cbxOri.setEnabled(false);
+            cbxForzaMotorsport.setEnabled(false);
+            cbxForzaHorizon.setEnabled(false);
+            cbxSeaOfTheThieves.setEnabled(false);
+            cbxQuantumBreak.setEnabled(false);
+            cbxMUA3.setEnabled(false);
+            cbxXenobladeChronicles.setEnabled(false);
+            cbxAnimalCrossing.setEnabled(false);
+            cbxZeldaBW.setEnabled(false);
+            cbxSuperMarioOdyssey.setEnabled(false);
+            cbxPokemon.setEnabled(false);
+            cbxZeldaLA.setEnabled(false);
+            cbxMarioKart8.setEnabled(false);
+            cbxSuperSmashBrosUltimate.setEnabled(false);
+            // Desactiva para todas las consolas
+            cbxBioshockInfinite.setEnabled(false);
+            cbxRiseTombRaider.setEnabled(false);
+            cbxMarvelAvengers.setEnabled(false);
+            cbxMinecraft.setEnabled(false);
+            cbxRedDeadRedemption2.setEnabled(false);
+            cbxMortalKombat11.setEnabled(false);
+            cbxInjustice2.setEnabled(false);
+            cbxDragonBallX2.setEnabled(false);
+            cbxDragonBallFZ.setEnabled(false);
+            cbxCodMW.setEnabled(false);
+            cbxBattlefield5.setEnabled(false);
+            cbxPUBG.setEnabled(false);
+            cbxDeadByDaylight.setEnabled(false);
+            cbxOverwatch.setEnabled(false);
+            cbxRainbowSixSiege.setEnabled(false);
+            cbxFallGuys.setEnabled(false);
+            cbxFriday13.setEnabled(false);
+            cbxAssassinsCreedOdyssey.setEnabled(false);
+            cbxAssassinsCreedOrigins.setEnabled(false);
+            cbxAssassinsCreedUnity.setEnabled(false);
+            cbxWatchDogsLegion.setEnabled(false);
+            cbxFIFA20.setEnabled(false);
+            cbxPES2020.setEnabled(false);
+            cbxNBA20.setEnabled(false);
+            cbxNBA21.setEnabled(false);
+            cbxPES2020.setEnabled(false);
+            //Activa exclusivos PS4
+            cbxGodOfWar.setEnabled(true);
+            cbxSpiderMan.setEnabled(true);
+            cbxTLOU2.setEnabled(true);
+            cbxInfamousSS.setEnabled(true);
+            cbxDaysGone.setEnabled(true);
+            cbxUntilDawn.setEnabled(true);
+            cbxGranTurismo.setEnabled(true);
+            cbxHorizonZeroDawn.setEnabled(true);
+
+        } else if (rbtXboxOne_1.isSelected() && rbtNo.isSelected()) {
+            // Desactiva juegos de otras consolas
+            cbxMUA3.setEnabled(false);
+            cbxXenobladeChronicles.setEnabled(false);
+            cbxAnimalCrossing.setEnabled(false);
+            cbxZeldaBW.setEnabled(false);
+            cbxSuperMarioOdyssey.setEnabled(false);
+            cbxPokemon.setEnabled(false);
+            cbxZeldaLA.setEnabled(false);
+            cbxMarioKart8.setEnabled(false);
+            cbxSuperSmashBrosUltimate.setEnabled(false);
+            cbxGodOfWar.setEnabled(false);
+            cbxSpiderMan.setEnabled(false);
+            cbxTLOU2.setEnabled(false);
+            cbxInfamousSS.setEnabled(false);
+            cbxFallGuys.setEnabled(false);
+            cbxDaysGone.setEnabled(false);
+            cbxUntilDawn.setEnabled(false);
+            cbxGranTurismo.setEnabled(false);
+            cbxHorizonZeroDawn.setEnabled(false);
+            // Activa los demás juegos
+            cbxBioshockInfinite.setEnabled(true);
+            cbxRiseTombRaider.setEnabled(true);
+            cbxMarvelAvengers.setEnabled(true);
+            cbxMinecraft.setEnabled(true);
+            cbxRedDeadRedemption2.setEnabled(true);
+            cbxMortalKombat11.setEnabled(true);
+            cbxInjustice2.setEnabled(true);
+            cbxDragonBallX2.setEnabled(true);
+            cbxDragonBallFZ.setEnabled(true);
+            cbxCodMW.setEnabled(true);
+            cbxBattlefield5.setEnabled(true);
+            cbxPUBG.setEnabled(true);
+            cbxDeadByDaylight.setEnabled(true);
+            cbxOverwatch.setEnabled(true);
+            cbxRainbowSixSiege.setEnabled(true);
+            cbxFriday13.setEnabled(true);
+            cbxAssassinsCreedOdyssey.setEnabled(true);
+            cbxAssassinsCreedOrigins.setEnabled(true);
+            cbxAssassinsCreedUnity.setEnabled(true);
+            cbxWatchDogsLegion.setEnabled(true);
+            cbxFIFA20.setEnabled(true);
+            cbxPES2020.setEnabled(true);
+            cbxNBA20.setEnabled(true);
+            cbxNBA21.setEnabled(true);
+            cbxPES2020.setEnabled(true);
+        } else if (rbtXboxOne_1.isSelected() && rbtSi.isSelected()) {
+            //Desactiva exclusivos de otras consolas
+            cbxMUA3.setEnabled(false);
+            cbxXenobladeChronicles.setEnabled(false);
+            cbxAnimalCrossing.setEnabled(false);
+            cbxZeldaBW.setEnabled(false);
+            cbxSuperMarioOdyssey.setEnabled(false);
+            cbxPokemon.setEnabled(false);
+            cbxZeldaLA.setEnabled(false);
+            cbxMarioKart8.setEnabled(false);
+            cbxSuperSmashBrosUltimate.setEnabled(false);
+            cbxGodOfWar.setEnabled(false);
+            cbxSpiderMan.setEnabled(false);
+            cbxTLOU2.setEnabled(false);
+            cbxInfamousSS.setEnabled(false);
+            cbxDaysGone.setEnabled(false);
+            cbxUntilDawn.setEnabled(false);
+            cbxGranTurismo.setEnabled(false);
+            cbxHorizonZeroDawn.setEnabled(false);
+            // Desactiva para todas las consolas
+            cbxBioshockInfinite.setEnabled(false);
+            cbxRiseTombRaider.setEnabled(false);
+            cbxMarvelAvengers.setEnabled(false);
+            cbxMinecraft.setEnabled(false);
+            cbxRedDeadRedemption2.setEnabled(false);
+            cbxMortalKombat11.setEnabled(false);
+            cbxInjustice2.setEnabled(false);
+            cbxDragonBallX2.setEnabled(false);
+            cbxDragonBallFZ.setEnabled(false);
+            cbxCodMW.setEnabled(false);
+            cbxBattlefield5.setEnabled(false);
+            cbxPUBG.setEnabled(false);
+            cbxDeadByDaylight.setEnabled(false);
+            cbxOverwatch.setEnabled(false);
+            cbxRainbowSixSiege.setEnabled(false);
+            cbxFallGuys.setEnabled(false);
+            cbxFriday13.setEnabled(false);
+            cbxAssassinsCreedOdyssey.setEnabled(false);
+            cbxAssassinsCreedOrigins.setEnabled(false);
+            cbxAssassinsCreedUnity.setEnabled(false);
+            cbxWatchDogsLegion.setEnabled(false);
+            cbxFIFA20.setEnabled(false);
+            cbxPES2020.setEnabled(false);
+            cbxNBA20.setEnabled(false);
+            cbxNBA21.setEnabled(false);
+            cbxPES2020.setEnabled(false);
+            //Activa exclusivos Xbox One
+            cbxGears5.setEnabled(true);
+            cbxHalo5.setEnabled(true);
+            cbxGearsOfWar4.setEnabled(true);
+            cbxOri.setEnabled(true);
+            cbxForzaMotorsport.setEnabled(true);
+            cbxForzaHorizon.setEnabled(true);
+            cbxSeaOfTheThieves.setEnabled(true);
+            cbxQuantumBreak.setEnabled(true);
+
+        } else if (rbtNintendoSwitch_1.isSelected() && rbtNo.isSelected()) {
+            // Desactiva juegos de otras consolas
+            cbxGears5.setEnabled(false);
+            cbxHalo5.setEnabled(false);
+            cbxGearsOfWar4.setEnabled(false);
+            cbxOri.setEnabled(false);
+            cbxForzaMotorsport.setEnabled(false);
+            cbxForzaHorizon.setEnabled(false);
+            cbxSeaOfTheThieves.setEnabled(false);
+            cbxQuantumBreak.setEnabled(false);
+            cbxGodOfWar.setEnabled(false);
+            cbxSpiderMan.setEnabled(false);
+            cbxTLOU2.setEnabled(false);
+            cbxInfamousSS.setEnabled(false);
+            cbxDaysGone.setEnabled(false);
+            cbxUntilDawn.setEnabled(false);
+            cbxGranTurismo.setEnabled(false);
+            cbxHorizonZeroDawn.setEnabled(false);
+            cbxFallGuys.setEnabled(false);
+            cbxRiseTombRaider.setEnabled(false);
+            cbxMarvelAvengers.setEnabled(false);
+            cbxRedDeadRedemption2.setEnabled(false);
+            cbxInjustice2.setEnabled(false);
+            cbxCodMW.setEnabled(false);
+            cbxBattlefield5.setEnabled(false);
+            cbxPUBG.setEnabled(false);
+            cbxOverwatch.setEnabled(false);
+            cbxRainbowSixSiege.setEnabled(false);
+            cbxAssassinsCreedOrigins.setEnabled(false);
+            cbxAssassinsCreedUnity.setEnabled(false);
+            cbxPES2020.setEnabled(false);
+            // Activa los demás juegos
+            cbxBioshockInfinite.setEnabled(true);
+            cbxMinecraft.setEnabled(true);
+            cbxMortalKombat11.setEnabled(true);
+            cbxDragonBallX2.setEnabled(true);
+            cbxDragonBallFZ.setEnabled(true);
+            cbxDeadByDaylight.setEnabled(true);
+            cbxFriday13.setEnabled(true);
+            cbxAssassinsCreedOdyssey.setEnabled(true);
+            cbxWatchDogsLegion.setEnabled(true);
+            cbxFIFA20.setEnabled(true);
+            cbxNBA20.setEnabled(true);
+            cbxNBA21.setEnabled(true);
+            cbxPES2020.setEnabled(true);
+            cbxMUA3.setEnabled(true);
+
+        } else if (rbtNintendoSwitch_1.isSelected() && rbtSi.isSelected()) {
+            //Desactiva exclusivos de otras consolas
+            cbxGodOfWar.setEnabled(false);
+            cbxSpiderMan.setEnabled(false);
+            cbxTLOU2.setEnabled(false);
+            cbxInfamousSS.setEnabled(false);
+            cbxDaysGone.setEnabled(false);
+            cbxUntilDawn.setEnabled(false);
+            cbxGranTurismo.setEnabled(false);
+            cbxHorizonZeroDawn.setEnabled(false);
+            cbxGears5.setEnabled(false);
+            cbxHalo5.setEnabled(false);
+            cbxGearsOfWar4.setEnabled(false);
+            cbxOri.setEnabled(false);
+            cbxForzaMotorsport.setEnabled(false);
+            cbxForzaHorizon.setEnabled(false);
+            cbxSeaOfTheThieves.setEnabled(false);
+            cbxQuantumBreak.setEnabled(false);
+            // Desactiva para todas las consolas
+            cbxBioshockInfinite.setEnabled(false);
+            cbxRiseTombRaider.setEnabled(false);
+            cbxMarvelAvengers.setEnabled(false);
+            cbxMinecraft.setEnabled(false);
+            cbxRedDeadRedemption2.setEnabled(false);
+            cbxMortalKombat11.setEnabled(false);
+            cbxInjustice2.setEnabled(false);
+            cbxDragonBallX2.setEnabled(false);
+            cbxDragonBallFZ.setEnabled(false);
+            cbxCodMW.setEnabled(false);
+            cbxBattlefield5.setEnabled(false);
+            cbxPUBG.setEnabled(false);
+            cbxDeadByDaylight.setEnabled(false);
+            cbxOverwatch.setEnabled(false);
+            cbxRainbowSixSiege.setEnabled(false);
+            cbxFallGuys.setEnabled(false);
+            cbxFriday13.setEnabled(false);
+            cbxAssassinsCreedOdyssey.setEnabled(false);
+            cbxAssassinsCreedOrigins.setEnabled(false);
+            cbxAssassinsCreedUnity.setEnabled(false);
+            cbxWatchDogsLegion.setEnabled(false);
+            cbxFIFA20.setEnabled(false);
+            cbxPES2020.setEnabled(false);
+            cbxNBA20.setEnabled(false);
+            cbxNBA21.setEnabled(false);
+            cbxPES2020.setEnabled(false);
+            // Activa los exclusivos para la Nintendo Switch
+            cbxMUA3.setEnabled(true);
+            cbxXenobladeChronicles.setEnabled(true);
+            cbxAnimalCrossing.setEnabled(true);
+            cbxZeldaBW.setEnabled(true);
+            cbxSuperMarioOdyssey.setEnabled(true);
+            cbxPokemon.setEnabled(true);
+            cbxZeldaLA.setEnabled(true);
+            cbxMarioKart8.setEnabled(true);
+            cbxSuperSmashBrosUltimate.setEnabled(true);
+        }
+        //JOptionPane.showMessageDialog(rootPane, "¡Debe elegir una consola!");
+
+
+    }//GEN-LAST:event_btnAplicarFiltroActionPerformed
+
+    private void rbtRestablecerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtRestablecerActionPerformed
+        // TODO add your handling code here:
+        buttonGroup2.clearSelection();
+        buttonGroup1.clearSelection();
+        cbxGodOfWar.setEnabled(true);
+        cbxSpiderMan.setEnabled(true);
+        cbxTLOU2.setEnabled(true);
+        cbxInfamousSS.setEnabled(true);
+        cbxDaysGone.setEnabled(true);
+        cbxUntilDawn.setEnabled(true);
+        cbxGranTurismo.setEnabled(true);
+        cbxHorizonZeroDawn.setEnabled(true);
+        cbxGears5.setEnabled(true);
+        cbxHalo5.setEnabled(true);
+        cbxGearsOfWar4.setEnabled(true);
+        cbxOri.setEnabled(true);
+        cbxForzaMotorsport.setEnabled(true);
+        cbxForzaHorizon.setEnabled(true);
+        cbxSeaOfTheThieves.setEnabled(true);
+        cbxQuantumBreak.setEnabled(true);
+        cbxBioshockInfinite.setEnabled(true);
+        cbxRiseTombRaider.setEnabled(true);
+        cbxMarvelAvengers.setEnabled(true);
+        cbxMinecraft.setEnabled(true);
+        cbxRedDeadRedemption2.setEnabled(true);
+        cbxMortalKombat11.setEnabled(true);
+        cbxInjustice2.setEnabled(true);
+        cbxDragonBallX2.setEnabled(true);
+        cbxDragonBallFZ.setEnabled(true);
+        cbxCodMW.setEnabled(true);
+        cbxBattlefield5.setEnabled(true);
+        cbxPUBG.setEnabled(true);
+        cbxDeadByDaylight.setEnabled(true);
+        cbxOverwatch.setEnabled(true);
+        cbxRainbowSixSiege.setEnabled(true);
+        cbxFallGuys.setEnabled(true);
+        cbxFriday13.setEnabled(true);
+        cbxAssassinsCreedOdyssey.setEnabled(true);
+        cbxAssassinsCreedOrigins.setEnabled(true);
+        cbxAssassinsCreedUnity.setEnabled(true);
+        cbxWatchDogsLegion.setEnabled(true);
+        cbxFIFA20.setEnabled(true);
+        cbxPES2020.setEnabled(true);
+        cbxNBA20.setEnabled(true);
+        cbxNBA21.setEnabled(true);
+        cbxPES2020.setEnabled(true);
+        cbxMUA3.setEnabled(true);
+        cbxXenobladeChronicles.setEnabled(true);
+        cbxAnimalCrossing.setEnabled(true);
+        cbxZeldaBW.setEnabled(true);
+        cbxSuperMarioOdyssey.setEnabled(true);
+        cbxPokemon.setEnabled(true);
+        cbxZeldaLA.setEnabled(true);
+        cbxMarioKart8.setEnabled(true);
+        cbxSuperSmashBrosUltimate.setEnabled(true);
+
+    }//GEN-LAST:event_rbtRestablecerActionPerformed
 
     /**
      * @param args the command line arguments
@@ -260,22 +1429,70 @@ public class Datos_juegos extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup btgGéneroJuego;
+    private javax.swing.JButton btnAplicarFiltro;
     private javax.swing.JButton btnGuardarJuego;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
-    private javax.swing.JComboBox<String> cmbGenero;
+    private javax.swing.JCheckBox cbxAnimalCrossing;
+    private javax.swing.JCheckBox cbxAssassinsCreedOdyssey;
+    private javax.swing.JCheckBox cbxAssassinsCreedOrigins;
+    private javax.swing.JCheckBox cbxAssassinsCreedUnity;
+    private javax.swing.JCheckBox cbxBattlefield5;
+    private javax.swing.JCheckBox cbxBioshockInfinite;
+    private javax.swing.JCheckBox cbxCodMW;
+    private javax.swing.JCheckBox cbxDaysGone;
+    private javax.swing.JCheckBox cbxDeadByDaylight;
+    private javax.swing.JCheckBox cbxDragonBallFZ;
+    private javax.swing.JCheckBox cbxDragonBallX2;
+    private javax.swing.JCheckBox cbxFIFA20;
+    private javax.swing.JCheckBox cbxFallGuys;
+    private javax.swing.JCheckBox cbxForzaHorizon;
+    private javax.swing.JCheckBox cbxForzaMotorsport;
+    private javax.swing.JCheckBox cbxFriday13;
+    private javax.swing.JCheckBox cbxGears5;
+    private javax.swing.JCheckBox cbxGearsOfWar4;
+    private javax.swing.JCheckBox cbxGodOfWar;
+    private javax.swing.JCheckBox cbxGranTurismo;
+    private javax.swing.JCheckBox cbxHalo5;
+    private javax.swing.JCheckBox cbxHorizonZeroDawn;
+    private javax.swing.JCheckBox cbxInfamousSS;
+    private javax.swing.JCheckBox cbxInjustice2;
+    private javax.swing.JCheckBox cbxMUA3;
+    private javax.swing.JCheckBox cbxMarioKart8;
+    private javax.swing.JCheckBox cbxMarvelAvengers;
+    private javax.swing.JCheckBox cbxMinecraft;
+    private javax.swing.JCheckBox cbxMortalKombat11;
+    private javax.swing.JCheckBox cbxNBA20;
+    private javax.swing.JCheckBox cbxNBA21;
+    private javax.swing.JCheckBox cbxOri;
+    private javax.swing.JCheckBox cbxOverwatch;
+    private javax.swing.JCheckBox cbxPES2020;
+    private javax.swing.JCheckBox cbxPUBG;
+    private javax.swing.JCheckBox cbxPokemon;
+    private javax.swing.JCheckBox cbxQuantumBreak;
+    private javax.swing.JCheckBox cbxRainbowSixSiege;
+    private javax.swing.JCheckBox cbxRedDeadRedemption2;
+    private javax.swing.JCheckBox cbxRiseTombRaider;
+    private javax.swing.JCheckBox cbxSeaOfTheThieves;
+    private javax.swing.JCheckBox cbxSpiderMan;
+    private javax.swing.JCheckBox cbxSuperMarioOdyssey;
+    private javax.swing.JCheckBox cbxSuperSmashBrosUltimate;
+    private javax.swing.JCheckBox cbxTLOU2;
+    private javax.swing.JCheckBox cbxUntilDawn;
+    private javax.swing.JCheckBox cbxWatchDogsLegion;
+    private javax.swing.JCheckBox cbxXenobladeChronicles;
+    private javax.swing.JCheckBox cbxZeldaBW;
+    private javax.swing.JCheckBox cbxZeldaLA;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JLabel lblExclusividad;
-    private javax.swing.JLabel lblGenero;
+    private javax.swing.JLabel lblTipoConsola;
+    private javax.swing.JRadioButton rbtNintendoSwitch_1;
     private javax.swing.JRadioButton rbtNo;
+    private javax.swing.JRadioButton rbtPS4_1;
+    private javax.swing.JButton rbtRestablecer;
     private javax.swing.JRadioButton rbtSi;
-    private javax.swing.JRadioButton rbtnNintentoSwitch;
-    private javax.swing.JRadioButton rbtnPS4;
-    private javax.swing.JRadioButton rbtnXboxOne;
+    private javax.swing.JRadioButton rbtXboxOne_1;
     // End of variables declaration//GEN-END:variables
 }

@@ -11,19 +11,15 @@ package proyecto_poo_;
  */
 public class Videojuego{
     private String nombre;
-    private Consola precio;
-    private String tipoRestriccion;
-    private String tipoGenero;
+    private double precio;
     private String exclusividad;
 
     public Videojuego() {
     }
 
-    public Videojuego(String nombre, Consola precio, String tipoRestriccion, String tipoGenero, String exclusividad) {
+    public Videojuego(String nombre, double precio, String exclusividad) {
         this.nombre = nombre;
         this.precio = precio;
-        this.tipoRestriccion = tipoRestriccion;
-        this.tipoGenero = tipoGenero;
         this.exclusividad = exclusividad;
     }
 
@@ -35,28 +31,12 @@ public class Videojuego{
         this.nombre = nombre;
     }
 
-    public Consola getPrecio() {
+    public double getPrecio() {
         return precio;
     }
 
-    public void setPrecio(Consola precio) {
+    public void setPrecio(double precio) {
         this.precio = precio;
-    }
-
-    public String getTipoRestriccion() {
-        return tipoRestriccion;
-    }
-
-    public void setTipoRestriccion(String tipoRestriccion) {
-        this.tipoRestriccion = tipoRestriccion;
-    }
-
-    public String getTipoGenero() {
-        return tipoGenero;
-    }
-
-    public void setTipoGenero(String tipoGenero) {
-        this.tipoGenero = tipoGenero;
     }
 
     public String getExclusividad() {
@@ -70,13 +50,18 @@ public class Videojuego{
     public void visualizarJuegos(){
         
     }
-    public String venderJuego(String juego){
-        return juego;
-    }
-    public void actualizarStock(){
-        
-    }
+    
     public boolean esExclusivo(){
-        return true;
+        boolean esExclusivo;
+        if(this.exclusividad.equals("Si")){
+            esExclusivo = true;
+        }else{
+            esExclusivo = false;
+        }
+        return esExclusivo;
+    }
+    
+    public void agregarDescuento(){
+        this.precio = this.precio*0.7;
     }
 }

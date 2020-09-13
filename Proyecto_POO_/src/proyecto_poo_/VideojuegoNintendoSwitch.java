@@ -9,8 +9,9 @@ package proyecto_poo_;
  *
  * @author Pavilion
  */
-public class VideojuegoXboxOne extends Videojuego{
-    public VideojuegoXboxOne(String nombre, double precio, String exclusividad) {
+public class VideojuegoNintendoSwitch extends Videojuego{
+    
+    public VideojuegoNintendoSwitch(String nombre, double precio, String exclusividad) {
         setNombre(nombre);
         setPrecio (precio);
         setExclusividad(exclusividad);

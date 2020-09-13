@@ -10,6 +10,10 @@ package proyecto_poo_;
  * @author Pavilion
  */
 public class Gestion_Consolas extends javax.swing.JFrame {
+    Consola nuevaConsola = new Consola();
+    String compañiaDeFabricacion = "";
+    String complemento = "Ninguno";
+    double precio;
 
     /**
      * Creates new form Gestion_Consolas
@@ -30,34 +34,30 @@ public class Gestion_Consolas extends javax.swing.JFrame {
         btgDatosConsola = new javax.swing.ButtonGroup();
         lblDato = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        rbtnPS4 = new javax.swing.JRadioButton();
-        rbtnXboxOne = new javax.swing.JRadioButton();
-        rbtnNintentoSwitch = new javax.swing.JRadioButton();
-        cbmPrecio = new javax.swing.JComboBox<>();
+        rbtPS4 = new javax.swing.JRadioButton();
+        rbtXboxOne = new javax.swing.JRadioButton();
+        rbtNintendoSwitch = new javax.swing.JRadioButton();
+        cmbPrecio = new javax.swing.JComboBox<>();
         btnSiguiente = new javax.swing.JButton();
+        rbtNingunaConsola = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        lblDato.setText("BIENVENIDO SELECCIONE LOS DATOS DE SU CONSOLA");
+        lblDato.setText("CONSOLAS");
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Tipos de consolas a la venta"));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Escoja la consola que desee comprar"));
 
-        btgDatosConsola.add(rbtnPS4);
-        rbtnPS4.setText("PS4");
+        btgDatosConsola.add(rbtPS4);
+        rbtPS4.setText("PS4");
 
-        btgDatosConsola.add(rbtnXboxOne);
-        rbtnXboxOne.setText("XBox One");
-        rbtnXboxOne.setToolTipText("");
-        rbtnXboxOne.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rbtnXboxOneActionPerformed(evt);
-            }
-        });
+        btgDatosConsola.add(rbtXboxOne);
+        rbtXboxOne.setText("XBox One");
+        rbtXboxOne.setToolTipText("");
 
-        btgDatosConsola.add(rbtnNintentoSwitch);
-        rbtnNintentoSwitch.setText("Nintento Switch");
+        btgDatosConsola.add(rbtNintendoSwitch);
+        rbtNintendoSwitch.setText("Nintento Switch");
 
-        cbmPrecio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Precio", "250 $", "280 $", "300 $", "330 $", "380 $", "410 $", "450 $" }));
+        cmbPrecio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Precio", "250 $", "280 $", "300 $", "330 $", "380 $", "410 $", "450 $" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -68,43 +68,56 @@ public class Gestion_Consolas extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(rbtnPS4)
-                            .addComponent(rbtnNintentoSwitch))
+                            .addComponent(rbtPS4)
+                            .addComponent(rbtNintendoSwitch))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(rbtnXboxOne)
+                        .addComponent(rbtXboxOne)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 126, Short.MAX_VALUE)
-                        .addComponent(cbmPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(cmbPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(49, 49, 49))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(27, 27, 27)
-                .addComponent(rbtnPS4)
+                .addComponent(rbtPS4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(rbtnXboxOne)
-                    .addComponent(cbmPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(rbtXboxOne)
+                    .addComponent(cmbPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(rbtnNintentoSwitch)
+                .addComponent(rbtNintendoSwitch)
                 .addContainerGap(18, Short.MAX_VALUE))
         );
 
-        btnSiguiente.setText("Datos del juego >");
+        btnSiguiente.setText("Catálogo de videojuegos >");
+        btnSiguiente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSiguienteActionPerformed(evt);
+            }
+        });
+
+        rbtNingunaConsola.setText("No estoy interesado en comprar una consola");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnSiguiente)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblDato)
-                        .addGap(25, 25, 25)))
+                        .addGap(30, 30, 30)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(rbtNingunaConsola))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(btnSiguiente)
+                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(157, 157, 157)
+                        .addComponent(lblDato)))
                 .addContainerGap(33, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -114,17 +127,33 @@ public class Gestion_Consolas extends javax.swing.JFrame {
                 .addComponent(lblDato)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(rbtNingunaConsola)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
                 .addComponent(btnSiguiente)
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void rbtnXboxOneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtnXboxOneActionPerformed
+    private void btnSiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiguienteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_rbtnXboxOneActionPerformed
+        if(rbtNingunaConsola.isSelected()){
+            nuevaConsola = nuevaConsola;
+        }
+        if(rbtPS4.isSelected()){
+            compañiaDeFabricacion = "Sony";
+        }else if(rbtXboxOne.isSelected()){
+            compañiaDeFabricacion = "Microsoft";
+        }else if(rbtNintendoSwitch.isSelected()){
+            compañiaDeFabricacion = "Nintendo";
+        }
+        precio = (Double) cmbPrecio.getSelectedItem();
+        nuevaConsola.setCompañiaDeFabricacion(compañiaDeFabricacion);
+        nuevaConsola.setComplemento(complemento);
+        nuevaConsola.setPrecio(precio);
+    }//GEN-LAST:event_btnSiguienteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -164,11 +193,12 @@ public class Gestion_Consolas extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup btgDatosConsola;
     private javax.swing.JButton btnSiguiente;
-    private javax.swing.JComboBox<String> cbmPrecio;
+    private javax.swing.JComboBox<String> cmbPrecio;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblDato;
-    private javax.swing.JRadioButton rbtnNintentoSwitch;
-    private javax.swing.JRadioButton rbtnPS4;
-    private javax.swing.JRadioButton rbtnXboxOne;
+    private javax.swing.JRadioButton rbtNingunaConsola;
+    private javax.swing.JRadioButton rbtNintendoSwitch;
+    private javax.swing.JRadioButton rbtPS4;
+    private javax.swing.JRadioButton rbtXboxOne;
     // End of variables declaration//GEN-END:variables
 }

@@ -27,14 +27,24 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="btnSiguiente" min="-2" max="-2" attributes="0"/>
-                  <Component id="jPanel1" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Group type="102" alignment="1" attributes="0">
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                              <Component id="rbtNingunaConsola" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="btnSiguiente" min="-2" max="-2" attributes="0"/>
+                              <Component id="jPanel1" alignment="1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="157" max="-2" attributes="0"/>
                       <Component id="lblDato" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="33" max="32767" attributes="0"/>
@@ -48,9 +58,11 @@
               <Component id="lblDato" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="rbtNingunaConsola" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="14" max="32767" attributes="0"/>
               <Component id="btnSiguiente" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="18" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -58,14 +70,14 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="lblDato">
       <Properties>
-        <Property name="text" type="java.lang.String" value="BIENVENIDO SELECCIONE LOS DATOS DE SU CONSOLA"/>
+        <Property name="text" type="java.lang.String" value="CONSOLAS"/>
       </Properties>
     </Component>
     <Container class="javax.swing.JPanel" name="jPanel1">
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder title="Tipos de consolas a la venta"/>
+            <TitledBorder title="Escoja la consola que desee comprar"/>
           </Border>
         </Property>
       </Properties>
@@ -78,15 +90,15 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="rbtnPS4" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="rbtnNintentoSwitch" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="rbtPS4" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="rbtNintendoSwitch" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="rbtnXboxOne" min="-2" max="-2" attributes="0"/>
+                          <Component id="rbtXboxOne" min="-2" max="-2" attributes="0"/>
                           <EmptySpace pref="126" max="32767" attributes="0"/>
-                          <Component id="cbmPrecio" min="-2" max="-2" attributes="0"/>
+                          <Component id="cmbPrecio" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -97,21 +109,21 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                  <Component id="rbtnPS4" min="-2" max="-2" attributes="0"/>
+                  <Component id="rbtPS4" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="rbtnXboxOne" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="cbmPrecio" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="rbtXboxOne" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cmbPrecio" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="rbtnNintentoSwitch" min="-2" max="-2" attributes="0"/>
+                  <Component id="rbtNintendoSwitch" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="18" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JRadioButton" name="rbtnPS4">
+        <Component class="javax.swing.JRadioButton" name="rbtPS4">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="btgDatosConsola"/>
@@ -119,7 +131,7 @@
             <Property name="text" type="java.lang.String" value="PS4"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="rbtnXboxOne">
+        <Component class="javax.swing.JRadioButton" name="rbtXboxOne">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="btgDatosConsola"/>
@@ -127,11 +139,8 @@
             <Property name="text" type="java.lang.String" value="XBox One"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rbtnXboxOneActionPerformed"/>
-          </Events>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="rbtnNintentoSwitch">
+        <Component class="javax.swing.JRadioButton" name="rbtNintendoSwitch">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="btgDatosConsola"/>
@@ -139,7 +148,7 @@
             <Property name="text" type="java.lang.String" value="Nintento Switch"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JComboBox" name="cbmPrecio">
+        <Component class="javax.swing.JComboBox" name="cmbPrecio">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="8">
@@ -162,7 +171,15 @@
     </Container>
     <Component class="javax.swing.JButton" name="btnSiguiente">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Datos del juego &gt;"/>
+        <Property name="text" type="java.lang.String" value="Cat&#xe1;logo de videojuegos &gt;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSiguienteActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="rbtNingunaConsola">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="No estoy interesado en comprar una consola"/>
       </Properties>
     </Component>
   </SubComponents>
