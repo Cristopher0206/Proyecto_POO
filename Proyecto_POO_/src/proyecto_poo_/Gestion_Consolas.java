@@ -49,15 +49,30 @@ public class Gestion_Consolas extends javax.swing.JFrame {
 
         btgDatosConsola.add(rbtPS4);
         rbtPS4.setText("PS4");
+        rbtPS4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbtPS4ActionPerformed(evt);
+            }
+        });
 
         btgDatosConsola.add(rbtXboxOne);
         rbtXboxOne.setText("XBox One");
         rbtXboxOne.setToolTipText("");
+        rbtXboxOne.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbtXboxOneActionPerformed(evt);
+            }
+        });
 
         btgDatosConsola.add(rbtNintendoSwitch);
         rbtNintendoSwitch.setText("Nintento Switch");
+        rbtNintendoSwitch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbtNintendoSwitchActionPerformed(evt);
+            }
+        });
 
-        cmbPrecio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Precio", "250 $", "280 $", "300 $", "330 $", "380 $", "410 $", "450 $" }));
+        cmbPrecio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Precio", "250", "280", "300", "330", "380", "410", "450" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -98,7 +113,13 @@ public class Gestion_Consolas extends javax.swing.JFrame {
             }
         });
 
+        btgDatosConsola.add(rbtNingunaConsola);
         rbtNingunaConsola.setText("No estoy interesado en comprar una consola");
+        rbtNingunaConsola.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbtNingunaConsolaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -139,6 +160,9 @@ public class Gestion_Consolas extends javax.swing.JFrame {
 
     private void btnSiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiguienteActionPerformed
         // TODO add your handling code here:
+        Datos_juegos abrir = new Datos_juegos();
+        abrir.setVisible(true);
+        this.setVisible(false);
         if(rbtNingunaConsola.isSelected()){
             nuevaConsola = nuevaConsola;
         }
@@ -154,6 +178,29 @@ public class Gestion_Consolas extends javax.swing.JFrame {
         nuevaConsola.setComplemento(complemento);
         nuevaConsola.setPrecio(precio);
     }//GEN-LAST:event_btnSiguienteActionPerformed
+
+    private void rbtNingunaConsolaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtNingunaConsolaActionPerformed
+        // TODO add your handling code here:
+        
+            cmbPrecio.setEnabled(false);
+        
+        
+    }//GEN-LAST:event_rbtNingunaConsolaActionPerformed
+
+    private void rbtNintendoSwitchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtNintendoSwitchActionPerformed
+        // TODO add your handling code here:
+        cmbPrecio.setEnabled(true);
+    }//GEN-LAST:event_rbtNintendoSwitchActionPerformed
+
+    private void rbtXboxOneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtXboxOneActionPerformed
+        // TODO add your handling code here:
+        cmbPrecio.setEnabled(true);
+    }//GEN-LAST:event_rbtXboxOneActionPerformed
+
+    private void rbtPS4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtPS4ActionPerformed
+        // TODO add your handling code here:
+        cmbPrecio.setEnabled(true);
+    }//GEN-LAST:event_rbtPS4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -193,12 +240,12 @@ public class Gestion_Consolas extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup btgDatosConsola;
     private javax.swing.JButton btnSiguiente;
-    private javax.swing.JComboBox<String> cmbPrecio;
+    protected static javax.swing.JComboBox<String> cmbPrecio;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblDato;
-    private javax.swing.JRadioButton rbtNingunaConsola;
-    private javax.swing.JRadioButton rbtNintendoSwitch;
-    private javax.swing.JRadioButton rbtPS4;
-    private javax.swing.JRadioButton rbtXboxOne;
+    protected static javax.swing.JRadioButton rbtNingunaConsola;
+    protected static javax.swing.JRadioButton rbtNintendoSwitch;
+    protected static javax.swing.JRadioButton rbtPS4;
+    protected static javax.swing.JRadioButton rbtXboxOne;
     // End of variables declaration//GEN-END:variables
 }
