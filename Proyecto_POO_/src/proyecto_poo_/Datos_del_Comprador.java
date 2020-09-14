@@ -7,6 +7,9 @@ package proyecto_poo_;
 
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
+import static proyecto_poo_.Datos_juegos.cbxInjustice2;
+import static proyecto_poo_.Datos_juegos.cbxRedDeadRedemption2;
+import static proyecto_poo_.Datos_juegos.cbxRiseTombRaider;
 
 /**
  *
@@ -320,23 +323,23 @@ public class Datos_del_Comprador extends javax.swing.JFrame {
         String año;
         String tipoConsola;
         String complemento;
-        ArrayList<String> consolas = new ArrayList();
-        tipoConsola=txtConsolaAdquirida.getText();
-        Consola consola= new Consola(tipoConsola);
 
         factura.setNumCedula(txtCédula.getText());
         factura.setNombre(txtNombre.getText());
         factura.setApellido(txtApellido.getText());
         dia = (String) cmbDia.getSelectedItem();
-        mes = (String) cmbMes.getSelectedItem();
+        mes = (String) cmbDia.getSelectedItem();
         año = (String) cmbAño.getSelectedItem();
         factura.setFecha(dia + "/" + mes + "/" + año);
-        //tipoConsola = (String) cmbTipoConsola.getSelectedItem();
+        String nombreConsola = txtConsolaAdquirida.getText();
+        double precioConsola = Double.parseDouble(txtPrecioConsola.getText());
+        Consola consolaAVender = new Consola(nombreConsola,precioConsola);
+        factura.setConsola(consolaAVender);
         complemento = (String) cbmTipoComplemento.getSelectedItem();
         factura.setComplemento(complemento);
         factura.setListaJuegos(listaJuegos);
         factura.setValorAPagar(Double.parseDouble(txtValorAPagar.getText()));
-        txaResultados.append(factura.toString());
+        txaResultados.setText(factura.toString());
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void txtApellidoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtApellidoKeyPressed
@@ -818,6 +821,37 @@ if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             }
             listaJuegos.add(nuevoJuego);
         }
+        if(cbxInjustice2.isSelected()){
+            nombre = "Injustice 2";
+            precio = 17;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxRedDeadRedemption2.isSelected()){
+            nombre = "Red Dead Redemption 2";
+            precio = 49;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        if(cbxRiseTombRaider.isSelected()){
+            nombre = "Rise of the Tomb Raider";
+            precio = 20;
+            exclusividad = "No";
+            Videojuego nuevoJuego = new Videojuego(nombre,precio,exclusividad);
+            if(nuevoJuego.esExclusivo()){
+                nuevoJuego.agregarDescuento();
+            }
+            listaJuegos.add(nuevoJuego);
+        }
+        
         
         double precioTotalJuegos = 0;
         double precioTotal=0;

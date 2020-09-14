@@ -5,11 +5,14 @@
  */
 package proyecto_poo_;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Pavilion
  */
 public class Gestion_Consolas extends javax.swing.JFrame {
+
     Consola nuevaConsola = new Consola();
     String compañiaDeFabricacion = "";
     String complemento = "Ninguno";
@@ -189,31 +192,40 @@ public class Gestion_Consolas extends javax.swing.JFrame {
 
     private void btnSiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiguienteActionPerformed
         // TODO add your handling code here:
-        Datos_juegos abrir = new Datos_juegos();
-        abrir.setVisible(true);
-        this.setVisible(false);
-        if(rbtNingunaConsola.isSelected()){
-            nuevaConsola = nuevaConsola;
+        if (rbtPS4.isSelected() == false && rbtXboxOne.isSelected() == false
+                && rbtNintendoSwitch.isSelected() == false && rbtNingunaConsola.isSelected() == false) {
+            JOptionPane.showMessageDialog(rootPane, "¡Seleccione una opción!");
+            Datos_juegos abrir = new Datos_juegos();
+            abrir.setVisible(false);
+            this.setVisible(true);
+        } else {
+            Datos_juegos abrir = new Datos_juegos();
+            abrir.setVisible(true);
+            this.setVisible(false);
+            if (rbtNingunaConsola.isSelected()) {
+                nuevaConsola = nuevaConsola;
+            }
+            if (rbtPS4.isSelected()) {
+                compañiaDeFabricacion = "Sony";
+            } else if (rbtXboxOne.isSelected()) {
+                compañiaDeFabricacion = "Microsoft";
+            } else if (rbtNintendoSwitch.isSelected()) {
+                compañiaDeFabricacion = "Nintendo";
+            }
+            precio = (Double) cmbPrecio.getSelectedItem();
+            nuevaConsola.setCompañiaDeFabricacion(compañiaDeFabricacion);
+            nuevaConsola.setComplemento(complemento);
+            nuevaConsola.setPrecio(precio);
         }
-        if(rbtPS4.isSelected()){
-            compañiaDeFabricacion = "Sony";
-        }else if(rbtXboxOne.isSelected()){
-            compañiaDeFabricacion = "Microsoft";
-        }else if(rbtNintendoSwitch.isSelected()){
-            compañiaDeFabricacion = "Nintendo";
-        }
-        precio = (Double) cmbPrecio.getSelectedItem();
-        nuevaConsola.setCompañiaDeFabricacion(compañiaDeFabricacion);
-        nuevaConsola.setComplemento(complemento);
-        nuevaConsola.setPrecio(precio);
+
     }//GEN-LAST:event_btnSiguienteActionPerformed
 
     private void rbtNingunaConsolaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtNingunaConsolaActionPerformed
         // TODO add your handling code here:
-        
-            cmbPrecio.setEnabled(false);
-        
-        
+
+        cmbPrecio.setEnabled(false);
+
+
     }//GEN-LAST:event_rbtNingunaConsolaActionPerformed
 
     private void rbtNintendoSwitchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtNintendoSwitchActionPerformed
