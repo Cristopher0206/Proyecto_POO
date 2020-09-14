@@ -307,6 +307,7 @@ if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             }
             listaJuegos.add(nuevoJuego);
         }
+        
         if (Datos_juegos.cbxAssassinsCreedOrigins.isSelected()) {
             nombre = "Assassins Creed Origins";
             precio = 35;
@@ -317,7 +318,7 @@ if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             }
             listaJuegos.add(nuevoJuego);
         }
-        if (Datos_juegos.cbxAssassinsCreedOdyssey.isSelected()) {
+        if (Datos_juegos.cbxAssassinsCreedUnity.isSelected()) {
             nombre = "Assassins Creed Unity";
             precio = 20;
             exclusividad = "No";
@@ -757,36 +758,7 @@ if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             }
             listaJuegos.add(nuevoJuego);
         }
-        if (Datos_juegos.cbxAssassinsCreedOdyssey.isSelected()) {
-            nombre = "Assassins Creed Odyssey";
-            precio = 24;
-            exclusividad = "No";
-            Videojuego nuevoJuego = new Videojuego(nombre, precio, exclusividad);
-            if (nuevoJuego.esExclusivo()) {
-                nuevoJuego.agregarDescuento();
-            }
-            listaJuegos.add(nuevoJuego);
-        }
-        if (Datos_juegos.cbxAssassinsCreedOdyssey.isSelected()) {
-            nombre = "Assassins Creed Odyssey";
-            precio = 24;
-            exclusividad = "No";
-            Videojuego nuevoJuego = new Videojuego(nombre, precio, exclusividad);
-            if (nuevoJuego.esExclusivo()) {
-                nuevoJuego.agregarDescuento();
-            }
-            listaJuegos.add(nuevoJuego);
-        }
-        if (Datos_juegos.cbxAssassinsCreedOdyssey.isSelected()) {
-            nombre = "Assassins Creed Odyssey";
-            precio = 24;
-            exclusividad = "No";
-            Videojuego nuevoJuego = new Videojuego(nombre, precio, exclusividad);
-            if (nuevoJuego.esExclusivo()) {
-                nuevoJuego.agregarDescuento();
-            }
-            listaJuegos.add(nuevoJuego);
-        }
+        
         double precioTotalJuegos = 0;
         double precioTotal=0;
 
