@@ -5,6 +5,7 @@
  */
 package proyecto_poo_;
 
+import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 
 /**
@@ -21,6 +22,7 @@ public class Datos_del_Comprador extends javax.swing.JFrame {
     public Datos_del_Comprador() {
         initComponents();
     }
+    
     Factura factura = new Factura();
 
     /**
@@ -276,7 +278,9 @@ public class Datos_del_Comprador extends javax.swing.JFrame {
 
     private void txtApellidoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtApellidoKeyPressed
 
-        // TODO add your handling code here:
+        
+// TODO add your handling code here:
+if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
         String nombre = "";
         double precio = 0;
         String exclusividad = "";
@@ -802,12 +806,17 @@ public class Datos_del_Comprador extends javax.swing.JFrame {
             precioTotal= precioTotalJuegos + Double.valueOf(txtPrecioConsola.getText());
         }
         if (Gestion_Consolas.rbtNingunaConsola.isSelected()) {
-            txtConsolaAdquirida.setText("");
-            txtPrecioConsola.setText("");
+            txtConsolaAdquirida.setEditable(false);
+            txtPrecioConsola.setEditable(false);
             precioTotal= precioTotalJuegos + 0;
         }
         
         txtValorAPagar.setText(String.valueOf(precioTotal));
+        
+        if(listaJuegos.size()<5){
+            cbmTipoComplemento.setEnabled(false);            
+        } 
+}
 
     }//GEN-LAST:event_txtApellidoKeyPressed
 
