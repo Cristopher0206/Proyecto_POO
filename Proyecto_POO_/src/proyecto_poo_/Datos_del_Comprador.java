@@ -268,7 +268,7 @@ public class Datos_del_Comprador extends javax.swing.JFrame {
         factura.setNombre(txtNombre.getText());
         factura.setApellido(txtApellido.getText());
         dia = (String) cmbDia.getSelectedItem();
-        mes = (String) cmbDia.getSelectedItem();
+        mes = (String) cmbMes.getSelectedItem();
         año = (String) cmbAño.getSelectedItem();
         factura.setFecha(dia + "/" + mes + "/" + año);
         //tipoConsola = (String) cmbTipoConsola.getSelectedItem();
