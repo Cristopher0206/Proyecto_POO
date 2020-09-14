@@ -10,12 +10,33 @@ package proyecto_poo_;
  * @author Pavilion
  */
 public class Consola {
+    private String nombre;
     private String compañiaDeFabricacion;
     private String complemento;
     private double precio;
 
     public Consola() {
         
+    }
+    
+    public Consola(String nombre, String compañiaFabricacion, String complemento, double precio){
+        this.nombre = nombre;
+        this.compañiaDeFabricacion = compañiaFabricacion;
+        this.complemento = complemento;
+        this.precio = precio;
+    }
+    
+    public Consola(String nombre, double precio){
+        this.nombre = nombre;
+        this.precio = precio;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getCompañiaDeFabricacion() {
@@ -41,6 +62,7 @@ public class Consola {
     public void setPrecio(double precio) {
         this.precio = precio;
     }
+    
     
   
 }
